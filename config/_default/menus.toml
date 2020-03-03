@@ -14,14 +14,19 @@
 #  weight = 20
 
 [[main]]
-  name = "Projects"
+  name = "Class Projects"
   url = "#projects"
-  weight = 30
+  weight = 10
 
+[[main]]
+  name = "Research Projects"
+  url= "#research"
+  weight = 20
+  
 [[main]]
   name = "Publications"
   url = "#featured"
-  weight = 40
+  weight = 30
 
 #[[main]]
 #  name = "Courses"
@@ -33,9 +38,9 @@
  [[main]]
     name = "Resume"
     url = "files/cv.pdf"
-    weight = 70
+    weight = 40
 
 [[main]]
   name = "Contact"
   url = "#contact"
-  weight = 60
+  weight = 50
