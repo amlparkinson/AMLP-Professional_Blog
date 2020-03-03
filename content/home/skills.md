@@ -18,18 +18,48 @@ subtitle = ""
   icon = "r-project"
   icon_pack = "fab"
   name = "R"
-  description = "90%"
+  #description = "90%"
   
 [[feature]]
-  icon = "chart-line"
+  icon = "square-root-alt"
   icon_pack = "fas"
   name = "Statistics"
-  description = "100%"  
+ # description = "100%"  
   
 [[feature]]
   icon = "camera-retro"
   icon_pack = "fas"
   name = "Photography"
-  description = "10%"
+#  description = "10%"
+
+[[feature]]
+  icon = "chart-pie"
+  icon_pack = "fas"
+  name = "Data Visualization"
+  
+[[feature]]
+  icon = "globe-americas"
+  icon_pack = "fas"
+  name = "GIS"
+  
+[[feature]]
+  icon = "satellite"
+  icon_pack = "fas"
+  name = "Remote Sensing"
+  
+[[feature]]
+  icon = "pen"
+  icon_pack = "fas"
+  name = "Writing"
+  
+[[feature]]
+  icon = "comments"
+  icon_pack = "far"
+  name = "Communication"
+  
+[[feature]]
+  icon = "ruler-combined"
+  icon_pack = "fas"
+  name = "Field Surveys"
 
 +++

@@ -17,4 +17,7 @@ new_site(theme = "gcushen/hugo-academic",
          to_yaml = TRUE)
 ```
 
-test  
+```{r}
+blogdown::serve_site()
+```
+
