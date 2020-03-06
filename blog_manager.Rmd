@@ -10,12 +10,17 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 library(blogdown)
 
+```
+
+```{r}
 new_site(theme = "gcushen/hugo-academic", 
          sample = TRUE, 
          theme_example = TRUE, 
          empty_dirs = TRUE,
          to_yaml = TRUE)
+
 ```
+
 
 ```{r}
 blogdown::serve_site()

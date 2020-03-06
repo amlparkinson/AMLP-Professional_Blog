@@ -1,8 +1,7 @@
 ---
 authors:
 - admin
-bio: My research interests include distributed robotics, mobile computing and programmable
-  matter.
+#bio: My research interests include fire ecology and 
 education:
   courses:
   - course: Masters of Environmental Science and Management
