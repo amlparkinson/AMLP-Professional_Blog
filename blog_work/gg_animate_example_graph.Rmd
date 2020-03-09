@@ -1,0 +1,38 @@
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(sf)
+library(gganimate)
+library(transformr)
+library(tidyverse)
+library(janitor)
+
+dams <- read_csv("ca_dams.csv") %>% 
+  clean_names() %>% 
+  drop_na(latitude) %>% 
+  drop_na(longitude) %>% 
+  drop_na(year_completed)
+
+ca_dams <- st_as_sf(dams, 
+                    coords = c("longitude","latitude")
+                    )
+
+st_crs(ca_dams) <- 4326
+
+ca_border <- read_sf(here::here("ca_state_border"), layer = "CA_State_TIGER2016")
+
+```
+
+```{r, echo = T}
+ca_dams_animated <- ggplot(data = ca_dams) +
+  geom_sf(data = ca_border) +
+  geom_sf(data = ca_dams, 
+          size = 1.5,
+          color = "dark blue") +
+  theme_void() +
+  labs(title = 'Year: {round(frame_time,0)}') +
+  transition_time(year_completed) +
+  shadow_mark(alpha = 1)
+```
+

@@ -1,0 +1,86 @@
+---
+title: "Linear Regression"
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(janitor)
+library(corrplot)
+library(stargazer)
+
+#load data
+homes_sub <- read_csv("slo_homes.csv") %>% 
+  clean_names() %>% 
+  filter(city %in% c("San Luis Obispo", "Atascadero", "Arroyo Grande"))
+
+homes_cor <- cor(homes_sub [2:5]) # brackets= means only consider these columns
+
+
+
+```
+
+<br>
+
+### Check data for collinearity
+```{r}
+corrplot(homes_cor,
+         method = "ellipse",
+         type = "upper")
+```
+
+<br>
+
+### Linear regression model and check for assumptions for linear regressions
+```{r}
+homes_lm <- lm(formula = price ~ sq_ft + status + city, data=homes_sub) 
+plot(homes_lm) 
+
+```
+Looks like assumption of constant variances of residuals (ie homoscedasicity) and assumption of residual normality is met 
+
+<br> 
+
+### Model summary
+```{r, results="asis"}
+
+# use stargazer to report results of linear regression
+stargazer(homes_lm, type='html')  
+
+```
+
+<br> 
+
+### Make predictions using mock data
+```{r}
+#create mock data 
+new_df <- data.frame(
+  city = rep(c("San Luis Obispo", "Arroyo Grande", "Atascadero"), each=10),
+  sq_ft = rep(seq(1000, 5000, length=10)),
+  status = "Regular"
+)
+
+#make predictions
+predict_df <-  predict(homes_lm, newdata=new_df)
+
+#bind together the new df with the prediciotns so its easier to see
+full_data <- data.frame(new_df, predict_df)
+
+```
+
+
+```{r, echo=F}
+# visualize predicted data
+ggplot() +
+  geom_point(data=homes_sub, 
+             aes(x=sq_ft, y=price, color=city, pch=city)) +
+  geom_line(data = full_data,
+            aes(x = sq_ft, 
+                y = predict_df,
+                color = city)) +
+  scale_color_manual(values = c("orange", "magenta", "black")) +
+  theme_light() +
+  labs(x = "Square Footage", y = "Price", title = "Predicted Data") 
+```

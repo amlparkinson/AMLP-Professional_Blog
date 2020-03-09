@@ -33,5 +33,70 @@
 </description>
     </item>
     
+    <item>
+      <title>Chi-Square Tests</title>
+      <link>/project/project_1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/project/project_1/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-{r&#34;&gt;knitr::opts_chunk$set(echo = TRUE)
+
+# load packages -----------------------------------------------
+
+library(tidyverse)
+library(janitor)
+library(dplyr)
+library(kableExtra)
+library(ggbeeswarm)
+library(car)
+library(effsize)
+
+# add data ---------------------------------------------------
+
+mack_creek_verts &amp;lt;- read_csv(&amp;quot;mack_creek_vertebrates.csv&amp;quot;) %&amp;gt;% 
+  clean_names()
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;h3 id=&#34;is-there-a-significant-difference-in-salamander-counts-in-channel-locations-in-old-growth-and-clear-cut-forests&#34;&gt;&lt;strong&gt;Is there a significant difference in salamander counts in channel locations in old growth and clear cut forests?&lt;/strong&gt;&lt;/h3&gt;
+&lt;br&gt;
+&lt;p&gt;Used a chi-square test to determine if there is a significant difference in what channel Pacific giant salamanders are located (pool, cascade or side channel) between the two old growth and clear cut forests.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Null Hypothesis:&lt;/strong&gt; There is no siginificant difference in what channel Pacific giant salamander are located between old growth and clear cut forests&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Alternative Hypothesis:&lt;/strong&gt; There is a significant difference in what channel Pacific giant salamander are located between old growth and clear cut forests&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{r,&#34;&gt;
+#subdata: only include 2017 and salamader observations-------------------------------------
+
+salamander_channel_2017 &amp;lt;- mack_creek_verts %&amp;gt;% 
+  filter (year == &amp;quot;2017&amp;quot;) %&amp;gt;% 
+  filter (species == &amp;quot;DITE&amp;quot;) %&amp;gt;% 
+  filter (unittype != &amp;quot;IP&amp;quot;) %&amp;gt;% 
+  mutate(channel_type= case_when(
+    unittype %in% &amp;quot;C&amp;quot; ~ &amp;quot;Cascade&amp;quot;,
+    unittype %in% &amp;quot;P&amp;quot; ~&amp;quot;Pool&amp;quot;,
+    unittype %in% &amp;quot;SC&amp;quot; ~ &amp;quot;Side Channel&amp;quot;
+  )) %&amp;gt;% 
+  select (species, channel_type, section)
+
+# counts
+salamander_channel_counts_2017 &amp;lt;- salamander_channel_2017 %&amp;gt;% 
+  group_by(channel_type, section) %&amp;gt;% 
+  count(species) %&amp;gt;% 
+  select (channel_type, section, n)
+
+# create contigency table of ONLY counts
+salamander_ct &amp;lt;- salamander_channel_counts_2017 %&amp;gt;% 
+  pivot_wider(names_from = section, values_from = n) %&amp;gt;%
+  column_to_rownames(&#39;channel_type&#39;)
+
+# chi-square test --------------------------------------------------------------------
+
+salamander_chi &amp;lt;- chisq.test(salamander_ct)
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;br&gt; 
+&lt;p&gt;A Pearson&amp;rsquo;s chi-squared test was performed to examine whether or not there was a significant difference in where in the channel Pacific giant salamanders are located between the two sections of forest (old growth and clear cut). The results from our test found that there was no siginificant difference in what channel Pacific giant salamander are located in forest section ($\chi$^2^(&lt;code&gt;r salamander_chi$parameter&lt;/code&gt;) = &lt;code&gt;r round(salamander_chi$statistic,2)&lt;/code&gt;, &lt;em&gt;p&lt;/em&gt; = &lt;code&gt;r round(salamander_chi$p.value,2)&lt;/code&gt;).&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
