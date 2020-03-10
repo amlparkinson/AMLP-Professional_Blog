@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="Master&#39;s Candidate and Research Associate">
+  <meta name="description" content="Conducting PCA to examine relationships between variables potentially contributing to fire induced conifer mortality.">
 
   
-  <link rel="alternate" hreflang="en-us" href="/project/">
+  <link rel="alternate" hreflang="en-us" href="/project/pca/">
 
   
 
@@ -210,14 +210,12 @@
 
 
   
-  <link rel="alternate" href="/project/index.xml" type="application/rss+xml" title="My Professional Blog">
-  
 
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="/project/">
+  <link rel="canonical" href="/project/pca/">
 
   
   
@@ -225,35 +223,82 @@
   
   
     
-    
   
   
-  <meta property="twitter:card" content="summary">
+  <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="My Professional Blog">
-  <meta property="og:url" content="/project/">
-  <meta property="og:title" content="Projects | My Professional Blog">
-  <meta property="og:description" content="Master&#39;s Candidate and Research Associate"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
-  <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
+  <meta property="og:url" content="/project/pca/">
+  <meta property="og:title" content="Principal Component Analysis | My Professional Blog">
+  <meta property="og:description" content="Conducting PCA to examine relationships between variables potentially contributing to fire induced conifer mortality."><meta property="og:image" content="/project/pca/featured.jpg">
+  <meta property="twitter:image" content="/project/pca/featured.jpg"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2016-04-27T00:00:00&#43;00:00">
+    
+    
   
-
-  
-
-
-
 
   
 
 
+    
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/project/pca/"
+  },
+  "headline": "Principal Component Analysis",
+  
+  "image": [
+    "/project/pca/featured.jpg"
+  ],
+  
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Anne-Marie Parkinson"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "My Professional Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "Conducting PCA to examine relationships between variables potentially contributing to fire induced conifer mortality."
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
   
 
 
 
 
 
-  <title>Projects | My Professional Blog</title>
+  <title>Principal Component Analysis | My Professional Blog</title>
 
 </head>
 
@@ -494,96 +539,386 @@
 </nav>
 
 
-  
-
-
-
-
-
-
-
-
-
-
-
+  <article class="article article-project">
 
   
 
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   
     
   
-<div class="universal-wrapper pt-3">
-  <h1>Projects</h1>
+
+
+<div class="article-container pt-3">
+  <h1>Principal Component Analysis</h1>
 
   
 
+  
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Jan 1, 0001
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 720px;">
+  <div style="position: relative">
+    <img src="/project/pca/featured_hu24f7b7b31795232ad2c81a23f6acbf93_199199_720x0_resize_q90_lanczos.jpg" alt="" class="featured-image">
+    
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h1 id="background">Background</h1>
+<p>I am currently workking on a project  to understand how topographic and climatic variables affected mortality of endemic Big-cone (<em>Pseudotsuga macrocarpa</em>) conifers in Los Padres National Forest after the 2007 Zaca Fire. Knowing how these variables interact to affect fire-induced mortality will help guide restoration efforts by prioritizing out-planting in areas most likely to survive future fires. ArcGIS was used to gather mean values for topographic variables such as elevation, aspect, topographic wetness index (TWI), and topographic position index (TPI) and climate variables; weather data was obtained as 30-year normals from the PRISM Climate Group^1^.  Here I will be exploring relationships between these environmental variables.</p>
+<h1 id="pca">PCA</h1>
+<pre><code class="language-{r,">#sub-data
+bc_sub &lt;- bc %&gt;% 
+  select (elev:tpi, vpd_Aug, twi, flow, vpd_jan, cwd_2) %&gt;% 
+  mutate(flow = as.numeric(flow)) %&gt;% 
+  drop_na() %&gt;% 
+  rename ('Elevation' = 'elev',
+          'Slope' = 'slope',
+          'TPI' = 'tpi',
+          'Annual Precipitation' = 'precip',
+          'Solar Radiation' = 'sr',
+          'Flow Accumulation' = 'flow',
+          'TWI' = 'twi',
+          'CWD' = 'cwd_2',
+          'Temperature' = 'temp',
+          'VPD (Jan)' = 'vpd_jan',
+          'VPD (Aug)' = 'vpd_Aug')
+
+# run PCA 
+z_bc_pca &lt;- prcomp(bc_sub, scale = T)
+
+</code></pre>
+<pre><code class="language-{r,">
+#plot
+autoplot(z_bc_pca, 
+         colour = NA, 
+         loadings.label = T,
+         loadings.label.size = 3,
+         loadings.label.colour = &quot;black&quot;,
+         loadings.label.repel = T) +
+  labs(title = &quot;PCA of Envrionmental Variables for Big-Cone Forests in Zaca Fire Scar&quot;) +
+  theme_minimal() +
+  scale_x_continuous(lim = c(-0.07, 0.1),
+                     expand = c(0,0)) +
+  scale_y_continuous(lim = c(-0.1, 0.1),
+                     expand = c(0,0))
+</code></pre>
+<p><em><strong>Figure 1:</strong> PCA exploring the relationships between various topographic and climatic variables that could influence fire-induced mortality of <em>P. macrocarpa</em>. 68.3% of variance is explained by the first two principal components.</em></p>
+<br> 
+<h1 id="results">Results:</h1>
+<ul>
+<li>Temperature (i.e. mean maximum August temperature),VPD (August), and climatic water deficit (CWD) have a very strong positive relationship with each other and a very strong negative relationship with annual precipitation. Both CWD and VPD depend on available water in the ecosystem. Thus, this strong trend is not surprising considering that one of the hottest months of the year in which there likely has not been rainfall in months is correlated with high VPD and high CWD.</li>
+<li>Elevation has a strong negative relationship with temperature, VPD (August and January), and CWD, yet a moderate positive relationship with annua precipitation. As elevation increase, temperatures cool which would in turn redcude VPD and CWD.</li>
+<li>Slope has a very strong negative relationship with flow accumulation and topographic wetness index (TWI). Slope is a component used to calculate TWI^2^. High values of TWI and flow accumulation (where water accumulates) indicate wetter areas. A decrease in slope would be associated with higher TWI and flow accumulation values.</li>
+</ul>
+<br>
+<h1 id="citations">Citations</h1>
+<ol>
+<li>PRISM Climate Group, Oregon State University, <a href="http://prism.oregonstate.edu">http://prism.oregonstate.edu</a>, created 4 Feb 2004.</li>
+<li>Grabs, T., Seibert, J., Bishop, K., Laudon, H. (2009). Modeling spatial patterns of saturated areas: A comparison of the topographic wetness index and a dynamic distributed model. Journal of Hydrology. 373(1-2):15-23.</li>
+</ol>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/demo/">Demo</a>
   
 </div>
 
 
 
-<div class="universal-wrapper">
-  
-
-  
-  
-    
-    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
     
       
       
-    
-    <div>
-      <h2><a href="http://example.org" target="_blank" rel="noopener">External Project</a></h2>
-      <div class="article-style">
+      
         
-          An example of linking directly to an external project website using `external_link`.
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/project/pca/&amp;text=Principal%20Component%20Analysis" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
         
-      </div>
-    </div>
-  
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/project/pca/&amp;t=Principal%20Component%20Analysis" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
     
-    
-    
-    <div>
-      <h2><a href="/project/internal-project/" >Internal Project</a></h2>
-      <div class="article-style">
+      
+      
+      
         
-          An example of using the in-built project page.
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Principal%20Component%20Analysis&amp;body=/project/pca/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
         
-      </div>
-    </div>
-  
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/project/pca/&amp;title=Principal%20Component%20Analysis" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
     
-    
-    
-    <div>
-      <h2><a href="/project/chi-square/" >Chi-Square Tests</a></h2>
-      <div class="article-style">
+      
+      
+      
         
-          An example of using the in-built project page.
-        
-      </div>
-    </div>
-  
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Principal%20Component%20Analysis%20/project/pca/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
     
-    
-    
-    <div>
-      <h2><a href="/project/pca/" >Principal Component Analysis</a></h2>
-      <div class="article-style">
+      
+      
+      
         
-          Conducting PCA to examine relationships between variables potentially contributing to fire induced conifer mortality.
-        
-      </div>
-    </div>
-  
-
-  
-
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/project/pca/&amp;title=Principal%20Component%20Analysis" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu4f6849ef8af38b119bc31dbb04488660_333346_270x270_fill_q90_lanczos_center.jpg" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/">Anne-Marie Parkinson</a></h5>
+      <h6 class="card-subtitle">Master&rsquo;s Candidate and Research Associate</h6>
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=DjFCUbsAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/amlparkinson" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/project/external-project/">External Project</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+    <div class="project-related-pages content-widget-hr">
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+    </div>
+  </div>
+</article>
 
       
 

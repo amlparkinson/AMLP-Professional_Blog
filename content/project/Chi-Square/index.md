@@ -21,10 +21,11 @@ url_video: ""
 ---
 
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
 
-# load packages ------------------------------------------------------------------
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F)
+
+# load packages -----------------------------------------------
 
 library(tidyverse)
 library(janitor)
@@ -34,7 +35,7 @@ library(ggbeeswarm)
 library(car)
 library(effsize)
 
-# add data -------------------------------------------------------------------------
+# add data ---------------------------------------------------
 
 mack_creek_verts <- read_csv("mack_creek_vertebrates.csv") %>% 
   clean_names()

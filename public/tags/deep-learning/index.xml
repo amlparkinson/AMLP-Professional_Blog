@@ -27,10 +27,10 @@
     
     <item>
       <title>Chi-Square Tests</title>
-      <link>/project/project_1/</link>
+      <link>/project/chi-square/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/project/project_1/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-{r&#34;&gt;knitr::opts_chunk$set(echo = TRUE)
+      <guid>/project/chi-square/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-{r&#34;&gt;knitr::opts_chunk$set(echo = F)
 
 # load packages -----------------------------------------------
 

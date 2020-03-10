@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="Master&#39;s Candidate and Research Associate">
+  <meta name="description" content="An example of using the in-built project page.">
 
   
-  <link rel="alternate" hreflang="en-us" href="/project/">
+  <link rel="alternate" hreflang="en-us" href="/project/chi-square/">
 
   
 
@@ -210,14 +210,12 @@
 
 
   
-  <link rel="alternate" href="/project/index.xml" type="application/rss+xml" title="My Professional Blog">
-  
 
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="/project/">
+  <link rel="canonical" href="/project/chi-square/">
 
   
   
@@ -225,35 +223,82 @@
   
   
     
-    
   
   
-  <meta property="twitter:card" content="summary">
+  <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="My Professional Blog">
-  <meta property="og:url" content="/project/">
-  <meta property="og:title" content="Projects | My Professional Blog">
-  <meta property="og:description" content="Master&#39;s Candidate and Research Associate"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
-  <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
+  <meta property="og:url" content="/project/chi-square/">
+  <meta property="og:title" content="Chi-Square Tests | My Professional Blog">
+  <meta property="og:description" content="An example of using the in-built project page."><meta property="og:image" content="/project/chi-square/featured.jpg">
+  <meta property="twitter:image" content="/project/chi-square/featured.jpg"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2016-04-27T00:00:00&#43;00:00">
+    
+    
   
-
-  
-
-
-
 
   
 
 
+    
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/project/chi-square/"
+  },
+  "headline": "Chi-Square Tests",
+  
+  "image": [
+    "/project/chi-square/featured.jpg"
+  ],
+  
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Anne-Marie Parkinson"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "My Professional Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "An example of using the in-built project page."
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
   
 
 
 
 
 
-  <title>Projects | My Professional Blog</title>
+  <title>Chi-Square Tests | My Professional Blog</title>
 
 </head>
 
@@ -494,6 +539,71 @@
 </nav>
 
 
+  <article class="article article-project">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+<div class="article-container pt-3">
+  <h1>Chi-Square Tests</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Jan 1, 0001
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
   
 
 
@@ -507,83 +617,361 @@
 
 
 
+
+<div class="btn-links mb-3">
   
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
   
   
     
   
-<div class="universal-wrapper pt-3">
-  <h1>Projects</h1>
-
   
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary my-1 mr-1" href="https://twitter.com/georgecushen" target="_blank" rel="noopener">
+    <i class="fab fa-twitter mr-1"></i>
+    Follow
+  </a>
 
+
+</div>
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 405px;">
+  <div style="position: relative">
+    <img src="/project/chi-square/featured_hu3d03a01dcc18bc5be0e67db3d8d209a6_224363_720x0_resize_q90_lanczos.jpg" alt="" class="featured-image">
+    <span class="article-header-caption">Photo by rawpixel on Unsplash</span>
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <pre><code class="language-{r">knitr::opts_chunk$set(echo = F)
+
+# load packages -----------------------------------------------
+
+library(tidyverse)
+library(janitor)
+library(dplyr)
+library(kableExtra)
+library(ggbeeswarm)
+library(car)
+library(effsize)
+
+# add data ---------------------------------------------------
+
+mack_creek_verts &lt;- read_csv(&quot;mack_creek_vertebrates.csv&quot;) %&gt;% 
+  clean_names()
+
+</code></pre>
+<br>
+<br>
+<h3 id="is-there-a-significant-difference-in-salamander-counts-in-channel-locations-in-old-growth-and-clear-cut-forests"><strong>Is there a significant difference in salamander counts in channel locations in old growth and clear cut forests?</strong></h3>
+<br>
+<p>Used a chi-square test to determine if there is a significant difference in what channel Pacific giant salamanders are located (pool, cascade or side channel) between the two old growth and clear cut forests.</p>
+<p><strong>Null Hypothesis:</strong> There is no siginificant difference in what channel Pacific giant salamander are located between old growth and clear cut forests</p>
+<p><strong>Alternative Hypothesis:</strong> There is a significant difference in what channel Pacific giant salamander are located between old growth and clear cut forests</p>
+<pre><code class="language-{r,">
+#subdata: only include 2017 and salamader observations-------------------------------------
+
+salamander_channel_2017 &lt;- mack_creek_verts %&gt;% 
+  filter (year == &quot;2017&quot;) %&gt;% 
+  filter (species == &quot;DITE&quot;) %&gt;% 
+  filter (unittype != &quot;IP&quot;) %&gt;% 
+  mutate(channel_type= case_when(
+    unittype %in% &quot;C&quot; ~ &quot;Cascade&quot;,
+    unittype %in% &quot;P&quot; ~&quot;Pool&quot;,
+    unittype %in% &quot;SC&quot; ~ &quot;Side Channel&quot;
+  )) %&gt;% 
+  select (species, channel_type, section)
+
+# counts
+salamander_channel_counts_2017 &lt;- salamander_channel_2017 %&gt;% 
+  group_by(channel_type, section) %&gt;% 
+  count(species) %&gt;% 
+  select (channel_type, section, n)
+
+# create contigency table of ONLY counts
+salamander_ct &lt;- salamander_channel_counts_2017 %&gt;% 
+  pivot_wider(names_from = section, values_from = n) %&gt;%
+  column_to_rownames('channel_type')
+
+# chi-square test --------------------------------------------------------------------
+
+salamander_chi &lt;- chisq.test(salamander_ct)
+
+</code></pre>
+<br> 
+<p>A Pearson&rsquo;s chi-squared test was performed to examine whether or not there was a significant difference in where in the channel Pacific giant salamanders are located between the two sections of forest (old growth and clear cut). The results from our test found that there was no siginificant difference in what channel Pacific giant salamander are located in forest section ($\chi$^2^(<code>r salamander_chi$parameter</code>) = <code>r round(salamander_chi$statistic,2)</code>, <em>p</em> = <code>r round(salamander_chi$p.value,2)</code>).</p>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/deep-learning/">Deep Learning</a>
   
 </div>
 
 
 
-<div class="universal-wrapper">
-  
-
-  
-  
-    
-    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
     
       
       
-    
-    <div>
-      <h2><a href="http://example.org" target="_blank" rel="noopener">External Project</a></h2>
-      <div class="article-style">
+      
         
-          An example of linking directly to an external project website using `external_link`.
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/project/chi-square/&amp;text=Chi-Square%20Tests" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
         
-      </div>
-    </div>
-  
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/project/chi-square/&amp;t=Chi-Square%20Tests" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
     
-    
-    
-    <div>
-      <h2><a href="/project/internal-project/" >Internal Project</a></h2>
-      <div class="article-style">
+      
+      
+      
         
-          An example of using the in-built project page.
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Chi-Square%20Tests&amp;body=/project/chi-square/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
         
-      </div>
-    </div>
-  
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/project/chi-square/&amp;title=Chi-Square%20Tests" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
     
-    
-    
-    <div>
-      <h2><a href="/project/chi-square/" >Chi-Square Tests</a></h2>
-      <div class="article-style">
+      
+      
+      
         
-          An example of using the in-built project page.
-        
-      </div>
-    </div>
-  
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Chi-Square%20Tests%20/project/chi-square/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
     
-    
-    
-    <div>
-      <h2><a href="/project/pca/" >Principal Component Analysis</a></h2>
-      <div class="article-style">
+      
+      
+      
         
-          Conducting PCA to examine relationships between variables potentially contributing to fire induced conifer mortality.
-        
-      </div>
-    </div>
-  
-
-  
-
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/project/chi-square/&amp;title=Chi-Square%20Tests" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu4f6849ef8af38b119bc31dbb04488660_333346_270x270_fill_q90_lanczos_center.jpg" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/">Anne-Marie Parkinson</a></h5>
+      <h6 class="card-subtitle">Master&rsquo;s Candidate and Research Associate</h6>
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=DjFCUbsAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/amlparkinson" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/project/internal-project/">Internal Project</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+    <div class="project-related-pages content-widget-hr">
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+    </div>
+  </div>
+</article>
 
       
 

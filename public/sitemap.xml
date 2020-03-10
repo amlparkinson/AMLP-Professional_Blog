@@ -218,7 +218,11 @@
   </url>
   
   <url>
-    <loc>/project/project_1/</loc>
+    <loc>/project/chi-square/</loc>
+  </url>
+  
+  <url>
+    <loc>/project/pca/</loc>
   </url>
   
 </urlset>
