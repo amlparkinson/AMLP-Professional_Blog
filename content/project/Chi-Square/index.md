@@ -2,7 +2,7 @@
 date: "2020"
 external_link: ""
 image:
-  caption: Photo by rawpixel on Unsplash
+  caption: 
   focal_point: Smart
 links:
 - icon: twitter
@@ -90,3 +90,4 @@ salamander_chi <- chisq.test(salamander_ct)
 <br> 
 
 A Pearson's chi-squared test was performed to examine whether or not there was a significant difference in where in the channel Pacific giant salamanders are located between the two sections of forest (old growth and clear cut). The results from our test found that there was no siginificant difference in what channel Pacific giant salamander are located in forest section ($\chi$^2^(`r salamander_chi$parameter`) = `r round(salamander_chi$statistic,2)`, *p* = `r round(salamander_chi$p.value,2)`). 
+

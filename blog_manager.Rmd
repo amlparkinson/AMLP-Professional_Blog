@@ -24,5 +24,14 @@ new_site(theme = "gcushen/hugo-academic",
 
 ```{r}
 blogdown::serve_site()
+
+
 ```
+
+
+error: humbs.db: Access is denied --> in console: list.files('.', '^Thumbs[.]db$', recursive=T, full.names=T) : this verifies there are db files in folders (they wont show when open the file folder)
+solution: unlink('public/publication/journal-article/Thumbs.db', recursive=T, force=F) --> make sure the slashes are in this direction (/) and exchange public/publication/journal-article/Thumbs.db so the file path matches the one with the issue
+
+
+
 
