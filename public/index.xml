@@ -931,5 +931,410 @@ autoplot(z_bc_pca,
 </description>
     </item>
     
+    <item>
+      <title>Statistical Tests</title>
+      <link>/project/anova/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/project/anova/</guid>
+      <description>&lt;h3 id=&#34;task-1-predicting-penguin-mass&#34;&gt;Task 1: Predicting Penguin Mass&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{r}&#34;&gt;# load data and remove NA&#39;s
+penguin &amp;lt;- read_csv(&amp;quot;lter_penguin_species.csv&amp;quot;) %&amp;gt;% 
+  drop_na(body_mass_g) %&amp;gt;% 
+  drop_na(flipper_length_mm) %&amp;gt;% 
+  drop_na(sex) %&amp;gt;% 
+  filter (sex != &amp;quot;.&amp;quot;)
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{r}&#34;&gt;
+# visualize data
+penguin_sub &amp;lt;- penguin %&amp;gt;% 
+  select(body_mass_g, species, flipper_length_mm, sex)
+
+ggplot(penguin_sub, aes(x=flipper_length_mm, y=body_mass_g)) +
+  geom_point(aes(color=fct_rev(species))) +
+  facet_wrap(~sex) +
+  labs(x = &amp;quot;\nFlipper Length (mm)&amp;quot;, 
+       y = &amp;quot;Body Mass (g)\n&amp;quot;, 
+       title = &amp;quot;Weight and Flipper Length\n of Three Antarctic Penguin Species&amp;quot;) +
+  theme_bw() +
+  scale_color_discrete(name=&amp;quot;Species&amp;quot;, 
+                       labels=c(&amp;quot;Gentoo Penguin (Pygoscelis papua)&amp;quot;,
+                                &#39;Chinstrap Penguin (Pygoscelis antarctica)&#39;,
+                                &amp;quot;Adelie Penguin (Pygoscelis adeliae)&amp;quot;)) +
+  theme(legend.title.align=0.5, 
+        plot.title = element_text(hjust=0.5),
+        panel.spacing=unit(2, &amp;quot;lines&amp;quot;)) +
+  scale_x_continuous(lim=c(150, 250), 
+                     expand=c(0,0),
+                     breaks=seq(150, 250, by=50)) +
+  scale_y_continuous(lim=c(2500, 6500), 
+                     expand=c(0,0),
+                     breaks=seq(3000, 6500, by=1000))
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Figure 1:&lt;/strong&gt; Flipper lengths (mm) and body mass (g) by sex of three penguin species in Antarctica - 
+&lt;a href=&#34;https://doi.org/10.6073/pasta/409c808f8fc9899d02401bdb04580af7&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gentoo&lt;/a&gt;, 
+&lt;a href=&#34;https://doi.org/10.6073/pasta/2b1cff60f81640f182433d23e68541ce&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Chinstrap&lt;/a&gt;, and 
+&lt;a href=&#34;https://doi.org/10.6073/pasta/abc50eed9138b75f54eaada0841b9b86&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Adelie&lt;/a&gt; penguins. Data: Palmer Station LTER.&lt;/em&gt;&lt;/p&gt;
+&lt;br&gt;
+General trends from Figure 1:
+&lt;ul&gt;
+&lt;li&gt;Male penguins appear to have higher body mass and slightly longer flipper lengths than females across all three species.&lt;/li&gt;
+&lt;li&gt;Gentoo penguins have the highest body mass and longest flipper length than Chinstrap and Adelie penguins.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{r,&#34;&gt;#Multiple linear regression model 
+
+# model trials --------------------------------------------------
+
+mass_model1 &amp;lt;- lm(body_mass_g ~ species + flipper_length_mm + sex, data=penguin)
+summary(mass_model1)
+
+mass_model2 &amp;lt;- lm(body_mass_g ~ flipper_length_mm + sex, data=penguin) 
+summary(mass_model2)
+
+mass_model3 &amp;lt;- lm(body_mass_g ~ species + flipper_length_mm, data=penguin)
+summary(mass_model3)
+
+# compare model AICs
+
+AIC (mass_model1) #4740 --&amp;gt; lowest AIC
+AIC (mass_model2) #4862
+AIC (mass_model3) #4895
+
+# check assumptions (residual normality and homoscedasticity)
+
+plot(mass_model1)
+
+# statement about how the model passes the assumptions here #########
+
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Table 1:&lt;/strong&gt; Regression table displaying the relationship between Antarctic penguins species, sex, and flipper length to predict body mass. (body mass(sex, flipper length, species) = -365.8 + 530.38(MALE) + 20.03(flipper length) + 836.26(Gentoo Penguin) - 87.63(Chinstrap Penguin)&lt;/em&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{r,&#34;&gt;#table to report model results (using stargazer)
+
+stargazer(mass_model1, type=&amp;quot;html&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;br&gt;
+&lt;p&gt;The assumptions for using multiple linear regression were met by plotting the residuals of the multiple linear regression model. The QQ plot showed that the residuals follow a normal distribution so the assumption of residual normality is met, while the residuals vs. fitted plot showed that the residuals appear randomly distributed with no change in range so the assumption of homoscedasticity is also met.&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;The adjusted R^2^ (R^2^ = 0.865) evaluates how much variance in body mass is explained by the explanatory variables (species, flipper length, sex), so in this case 86.5% of the variance in penguin body mass can be explained by species, flipper length, and sex.&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;Interpretation of the model coefficients:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If everything else about the penguin is the same (species, flipper length), then I expect male penguins to weigh 530.38 grams more than a female penguin on average&lt;/li&gt;
+&lt;li&gt;If everything else is held constant, then I expect boby mass to increase 20.03 grams for every 1 mm increase in flipper length.&lt;/li&gt;
+&lt;li&gt;If everything else about the penguin is the same (sex, flipper length), then I expect Gentoo penguins weigh 836.26 grams more than Adelie penguins.&lt;/li&gt;
+&lt;li&gt;If everything else about the penguin is the same (sex, flipper length), then I expect Chinstrap penguins weigh 87.63 grams less than Adelie penguins.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Table 2:&lt;/strong&gt; Predicted weights of three penguins (right column) using model: (body mass(sex, flipper length, species) = -365.8 + 530.38(MALE) + 20.03(flipper length) + 836.26(Gentoo Penguin) - 87.63(Chinstrap Penguin)&lt;/em&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{r}&#34;&gt;# Use the model predict the masses 
+
+# create data frame
+new_df &amp;lt;- data.frame(
+  flipper_length_mm = rep(c(195, 205, 220)),
+  sex = rep(c(&amp;quot;FEMALE&amp;quot;, &amp;quot;MALE&amp;quot;, &amp;quot;MALE&amp;quot;)),
+  species = rep(c(&amp;quot;Chinstrap penguin (Pygoscelis antarctica)&amp;quot;, &amp;quot;Adelie Penguin (Pygoscelis adeliae)&amp;quot;, &amp;quot;Gentoo penguin (Pygoscelis papua)&amp;quot;))
+)
+
+# predict values in data frame
+predict_df &amp;lt;- predict(mass_model1, newdata = new_df)
+
+# bind predictions with new_df
+new_df_predictions &amp;lt;- data.frame(new_df, predict_df)
+
+# make new_df_preiditions into a nice table
+
+new_df_predictions %&amp;gt;% 
+  kable (col.names = c(&amp;quot;Flipper Length (mm)&amp;quot;, &amp;quot;Sex&amp;quot;, &amp;quot;Species&amp;quot;, &amp;quot;Body Mass (g) Predictions&amp;quot;), align=&amp;quot;c&amp;quot;) %&amp;gt;%
+ # add_header_above(c(&amp;quot; &amp;quot;= 1, &amp;quot;Low Birthweight?&amp;quot;=2)) %&amp;gt;% 
+  kable_styling(
+    bootstrap_options = c(&amp;quot;striped&amp;quot;, &amp;quot;hover&amp;quot;, &amp;quot;condensed&amp;quot;, &amp;quot;responsive&amp;quot;), 
+    full_width=T,
+    position=&amp;quot;center&amp;quot;) 
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;h3 id=&#34;task-2-smoking-effects-on-baby-birth-weight&#34;&gt;Task 2: Smoking effects on baby birth weight&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{r}&#34;&gt;# load data and only keep tpounds, lowbw, and smoke columns
+
+birthweights &amp;lt;- read_csv(&#39;nc_birthweights.csv&#39;) %&amp;gt;% 
+  select (tpounds, lowbw, smoke) %&amp;gt;% 
+  drop_na(smoke)
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Table 3:&lt;/strong&gt; Data was collected on babies birthweight (categorically classified as low or not low) and whther or not the mother smoked during pregnancy. 1,000 babies from North Carolina were randomly selected for the study.&lt;/em&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{r}&#34;&gt;# table: Does the proportion of babies born at “low birth weight” differ depending on whether the mother smoked or did not smoke during pregnancy
+
+# step 1: create sub data
+
+birthweights_table_data &amp;lt;- birthweights %&amp;gt;% 
+  group_by(smoke) %&amp;gt;% 
+  count(lowbw) %&amp;gt;% 
+  mutate(low_birth_weight = case_when( 
+         lowbw == 1 ~ &amp;quot;Yes&amp;quot;,
+         lowbw == 0 ~ &amp;quot;No&amp;quot;)) %&amp;gt;% 
+  mutate(&amp;quot;Mother Smoke?&amp;quot; = case_when(
+    smoke == 1 ~&amp;quot;Yes&amp;quot;,
+    smoke == 0 ~&amp;quot;No&amp;quot;
+  )) %&amp;gt;% 
+  ungroup(smoke) %&amp;gt;% 
+  select(-lowbw, -smoke)
+
+# step 2 create contigency  table
+
+birthweights_table_counts &amp;lt;- birthweights_table_data %&amp;gt;% 
+  pivot_wider(names_from = low_birth_weight, values_from = n) 
+
+birthweights_table_proportions &amp;lt;- birthweights_table_counts %&amp;gt;% 
+  adorn_percentages(denominator = &amp;quot;row&amp;quot;) %&amp;gt;% 
+  adorn_pct_formatting(digits=1) %&amp;gt;% 
+  adorn_ns(position = &amp;quot;front&amp;quot;)
+
+# step 3: R markdown friendly contigency table with counts and proportions
+
+birthweights_table_proportions %&amp;gt;% 
+  kable (col.names = c(&amp;quot;Mother Smoke?&amp;quot;, &amp;quot;No&amp;quot;, &amp;quot;Yes&amp;quot;)) %&amp;gt;%
+  add_header_above(c(&amp;quot; &amp;quot;= 1, &amp;quot;Low Birthweight?&amp;quot;=2)) %&amp;gt;% 
+  #add_header_above(c(&amp;quot;North Carolina babies: Does mother smoking affect baby&#39;s birthweight?&amp;quot;=3)) %&amp;gt;% 
+  kable_styling(
+    bootstrap_options = c(&amp;quot;striped&amp;quot;, &amp;quot;hover&amp;quot;, &amp;quot;condensed&amp;quot;, &amp;quot;responsive&amp;quot;), 
+    full_width=F,
+    position=&amp;quot;center&amp;quot;) %&amp;gt;% 
+  column_spec(1, width=&#39;4cm&#39;) %&amp;gt;%  #control column 1&#39;s row width
+  column_spec(2, width=&amp;quot;8em&amp;quot;) %&amp;gt;% 
+  column_spec(3, width=&amp;quot;8em&amp;quot;)
+
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{r,&#34;&gt;# statistically significant difference between the proportion of babies born at low birth weights for smoking vs. non-smoking mothers? 
+
+# H null: there is no difference in birthweights of babies from mothers who did and did not smoke
+# H alt : there is a difference in birthweights of babies from mothers who did and did not smoke
+
+# step 1: get cocntigency table of just counts
+birthweight_counts &amp;lt;- birthweights_table_counts %&amp;gt;% 
+  column_to_rownames(&#39;Mother Smoke?&#39;)           
+
+# step 2: run chi-square test
+birthweights_chi &amp;lt;- chisq.test(birthweight_counts)
+birthweights_chi
+
+# p = 0.2696
+&lt;/code&gt;&lt;/pre&gt;
+&lt;br&gt;
+&lt;p&gt;A Pearson&amp;rsquo;s chi-squared test was performed to examine whether or not babies with low birthweights are independent of having mothers who smoked during pregnancy. The results from our test found that babies with low bithweights are independent of being born from mothers who smoked during pregnancy ($\chi$^2^(&lt;code&gt;r birthweights_chi$parameter&lt;/code&gt;) = &lt;code&gt;r round(birthweights_chi$statistic,2)&lt;/code&gt;, &lt;em&gt;p&lt;/em&gt; = &lt;code&gt;r round(birthweights_chi$p.value,2)&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;To improve future surveys, researchers might consider changing the &amp;ldquo;smoking during pregnancy&amp;rdquo; category from binomial (yes or no) to an ordinal response with more than two categories (e.g. frequently, sometimes, rarely, never). Some women might have smoked once or twice throughout their pregnancy, while others might have smoked every day, or some other frequency. Mothers who smoked once or twice may not have had as much of an effect on their babies birthweight than mothers who smoked frequently, so researchers would want to distinguish between these differences if there are any.&lt;/p&gt;
+&lt;br&gt;
+&lt;h3 id=&#34;task-3-visualizing-ucsb-campus-profiles&#34;&gt;Task 3: Visualizing UCSB campus profiles&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{r,&#34;&gt;ucsb &amp;lt;- read_csv(&#39;ucsb_campus_profiles.csv&#39;) %&amp;gt;% 
+  pivot_longer(&#39;2018 - 2019&#39; : &#39;2008 - 2009&#39;,
+               names_to = &#39;year&#39;,
+               values_to = &#39;value&#39;) %&amp;gt;% 
+  clean_names()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In this section, I will explore the undergraduate enrollment rates of minorities at University of California, Santa barbara across all years of available data (2008-2019). Enrollment rates of whites, others, and unknowns were excluded from the analysis and some ethnicities were combined into similar groups (Filipinos were combined with Asian and Pacific Islanders, Chicanos and Latinos were combined into a new group called Hispanics).&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{r}&#34;&gt;# for now, explore what relationship to explore
+# subdata: combine groups and remove other/unknown
+
+ucsb_ethnicity &amp;lt;- ucsb %&amp;gt;% 
+  filter (student_level == &amp;quot;Undergraduate (individuals)&amp;quot;) %&amp;gt;% 
+  group_by(ethnicity_domestic_enrollment,year) %&amp;gt;% 
+  summarise(enrollment = sum(value, na.rm=T)) %&amp;gt;% 
+  ungroup(ethnicity_domestic_enrollment)
+
+ucsb_ethnicity_combined &amp;lt;- ucsb_ethnicity %&amp;gt;% 
+  filter (ethnicity_domestic_enrollment != &amp;quot;White&amp;quot;) %&amp;gt;% 
+  filter (ethnicity_domestic_enrollment != &amp;quot;Other&amp;quot;) %&amp;gt;%
+  filter (ethnicity_domestic_enrollment != &amp;quot;Unknown&amp;quot;) %&amp;gt;% 
+  mutate (ethnicity_domestic_enrollment = case_when(
+    ethnicity_domestic_enrollment %in% &#39;American Indian / Alaskan&#39;  ~ &#39;American Indian/Alaskan&#39;, 
+    ethnicity_domestic_enrollment %in% c(&amp;quot;Asian / Pacific Islander&amp;quot;, &amp;quot;Filipino&amp;quot; ) ~ &amp;quot;Asian/Pacific Islander&amp;quot;, 
+    ethnicity_domestic_enrollment %in% &amp;quot;Black / African American&amp;quot; ~ &amp;quot;African American&amp;quot;,
+    ethnicity_domestic_enrollment %in% c(&amp;quot;Chicano&amp;quot;, &amp;quot;Latino&amp;quot;) ~ &amp;quot;Hispanic&amp;quot;,
+    ethnicity_domestic_enrollment %in% &amp;quot;E. Indian / Pakistani&amp;quot; ~ &amp;quot;E.Indian/Pakistani&amp;quot;
+    )) %&amp;gt;% 
+  group_by(year, ethnicity_domestic_enrollment) %&amp;gt;% 
+  summarise(enrollment = sum(enrollment)) 
+
+
+#plot
+
+ggplot (ucsb_ethnicity_combined, aes(x= year, y=enrollment)) +
+  geom_line (aes(group = ethnicity_domestic_enrollment, 
+                 color=ethnicity_domestic_enrollment), 
+             show.legend=F) +
+  geom_point(aes(color=ethnicity_domestic_enrollment), show.legend=F) +
+  theme_bw() +
+  labs(x= &amp;quot;\nYear&amp;quot;, 
+       y= &amp;quot;Enrollment\n&amp;quot;, 
+       title=&amp;quot; Undergraduate Enrollment of Minorities at UC Santa Barbara&amp;quot;, 
+       subtitle=&amp;quot;2008-2019\n&amp;quot;) +
+
+
+
+   coord_cartesian(clip=&amp;quot;off&amp;quot;) +
+   theme(plot.title = element_text(hjust=0.5),
+        plot.subtitle = element_text(hjust=0.5),
+        plot.margin = unit(c(1,7,1,1),&amp;quot;lines&amp;quot;)) +
+  scale_x_discrete (expand=c(0,0),
+                    labels = c(&#39;08-09&#39;, &#39;09-10&#39;, &#39;10-11&#39;, 
+                               &#39;11-12&#39;, &#39;12-13&#39;, &#39;13-14&#39;, 
+                               &#39;14-15&#39;, &#39;15-16&#39;, &#39;16-17&#39;, 
+                               &#39;17-18&#39;, &#39;18-19&#39;)) +
+  scale_y_continuous(lim=c(0, 7000), 
+                     expand=c(0,0),
+                     breaks=seq(0,7000, by=1000)) +
+  annotate(&amp;quot;text&amp;quot;, label= &amp;quot;American Indian/Alaskan&amp;quot;, 
+           x = Inf, 
+           y = 150, 
+           size = 3,
+           hjust = -0.12,
+           vjust = 0) +
+  annotate(&amp;quot;text&amp;quot;, label = &amp;quot;Asian/Pacific Islander&amp;quot;,
+           x = Inf,
+           y = 5000,
+           size = 3,
+           hjust = -0.1,
+           vjust = 0) +
+  annotate(&amp;quot;text&amp;quot;, label = &amp;quot;African American&amp;quot;,
+           x = Inf,
+           y = 1010,
+           size = 3,
+           hjust = -0.175,
+           vjust = 0) +
+  annotate(&amp;quot;text&amp;quot;, label = &amp;quot;Hispanic&amp;quot;,
+           x = Inf,
+           y = 6020,
+           size = 3,
+           hjust = -0.25,
+           vjust = 0) +
+  annotate(&amp;quot;text&amp;quot;, label = &amp;quot;E.Indian/Pakistani&amp;quot;,
+           x = Inf,
+           y = 650,
+           size = 3,
+           hjust = -0.18,
+           vjust = 0) 
+  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Figure x:&lt;/strong&gt; Annual undergraduate enrollment rates of minorities and underrepresented groups at University of California, Santa Barbara. Years are based on a school calendar year which starts in September of one year and ends in June of the following year. Data: 
+&lt;a href=&#34;http://bap.ucsb.edu/institutional.research/campus.profiles/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;UCSB&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;General takeways from Figure x:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Line graphs with groups that have large differences in numbers (Hispanics and Asian/Pacific Islander compared to African Americans, E. Indian/Pakistani, and American Indian/Alaskan) can result in incorrectly misinterpreting  information minorities have had the largest growth in undergradutes.&lt;/li&gt;
+&lt;li&gt;While it appears that the enrollment for the other three minorities has been relatively stagnant, African American enrollment has almost doubled and East Indian and Pakistani enrollment has increased by 226% since 2008-2009 school year. American Indian and Alaskan enrollment has very similar percent change: 52% and 54% respectively.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h3 id=&#34;task-4-purple-urchins-on-the-santa-barbara-coast&#34;&gt;Task 4: Purple urchins on the Santa Barbara coast&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{r,&#34;&gt;# load data and modify so only have purple urchin observations in control treatments 
+
+urchin &amp;lt;- read_csv(&#39;sbc_lter_urchins.csv&#39;) 
+urchin &amp;lt;-  urchin %&amp;gt;% 
+  clean_names() %&amp;gt;% 
+  filter (common_name == &amp;quot;Purple Urchin&amp;quot;) %&amp;gt;% 
+  filter (treatment == &amp;quot;CONTROL&amp;quot;) %&amp;gt;% 
+  uncount(count) %&amp;gt;% 
+  select (year, site, size) %&amp;gt;% 
+  mutate(site = case_when(
+    site %in% c(&amp;quot;CARP&amp;quot;) ~ &amp;quot;Carpinteria&amp;quot; ,
+    site %in% c(&amp;quot;IVEE&amp;quot;) ~ &amp;quot;Isla Vista&amp;quot;,
+    site %in% c(&amp;quot;AQUE&amp;quot;) ~ &amp;quot;Arroyo Quemado&amp;quot;,
+    site %in% c(&amp;quot;MOHK&amp;quot;) ~ &amp;quot;Mohawk&amp;quot;, 
+    site %in% c(&amp;quot;NAPL&amp;quot;) ~ &amp;quot;Naples&amp;quot;)) %&amp;gt;% 
+  mutate(year=as.character(year))
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;br&gt; 
+&lt;p&gt;*&lt;strong&gt;Table 4&lt;/strong&gt; Summary statistics for purple urchin (&lt;em&gt;Strongylocentrotus purpuratus&lt;/em&gt;) population sizes in control plots at five sites along the Santa Barbara coast from 2008-2018. Data: 
+&lt;a href=&#34;https://doi.org/10.6073/pasta/846569acc8745c133a44eac40245e6f0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SBC LTER&lt;/a&gt;. *&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{r}&#34;&gt;
+# summary statistics for urchin sizes at the 5 different sites
+
+urchin_stats &amp;lt;- urchin %&amp;gt;% 
+  group_by(site) %&amp;gt;% 
+  summarize (mean = mean(size, na.rm=T),
+             sd = sd(size, na.rm=T),
+             se = sd((size) / sqrt(n()), na.rm=T),
+             sample_size = n())
+# kable of urchin stats
+
+urchin_stats %&amp;gt;% 
+  kable (col.names = c(&amp;quot;Site&amp;quot;, &amp;quot;Mean&amp;quot;, &amp;quot;Standard Deviation&amp;quot;, &amp;quot;Standard Error&amp;quot;, &amp;quot;Sample Size&amp;quot;),
+         digits=2) %&amp;gt;%
+  kable_styling(
+    bootstrap_options = c(&amp;quot;striped&amp;quot;, &amp;quot;hover&amp;quot;, &amp;quot;condensed&amp;quot;, &amp;quot;responsive&amp;quot;), 
+    full_width=T,
+    position=&amp;quot;center&amp;quot;) 
+
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;br&gt;
+&lt;br&gt;
+```{r}
+# exploratory graphs of purple urchin size distributions at each site
+&lt;p&gt;ggplot (urchin, aes(x=size)) +
+geom_density(aes(fill=site), show.legend=F) +
+labs ( x= &amp;lsquo;\nSize (cm)&#39;, 
+y = &amp;lsquo;Density\n&amp;rsquo;, 
+title=&amp;quot;Sampling distribution of purple urchins&amp;rdquo;,
+subtitle = &amp;ldquo;2008-2018\n&amp;rdquo;) +
+scale_x_continuous(expand = c(0,0),
+lim = c(0,10),
+breaks = seq(0,10, by=2)) +
+scale_y_continuous(expand = c(0,0)) +
+theme_bw() +
+facet_wrap(~site, scales=&amp;quot;free_x&amp;rdquo;) +
+theme(plot.title = element_text(hjust=0.5),
+panel.spacing=unit(2, &amp;ldquo;lines&amp;rdquo;),
+plot.subtitle = element_text(hjust=0.5))&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+Observed trends in sampe distribution graphs:
+
+- Urchin sizes at Arroyo Quemado, Isla Vista, and Mohawk appear normally distributed, while urchin sizes are slightly right skewed.
+
+
+&amp;lt;br&amp;gt;
+
+Observations of exploratory graphs:
+
+- Distribution of sizes appears to be normal for all five sites.
+- There is a large sample size for all sites, so it is unlikely that all urchins at the sites fall within these bounds. These gaps in the graph are likely due to sampling error --&amp;gt; check metadata
+
+```{r, include = F}
+# is there a significant difference in mean purple urchin size in control treatments at the 5 sites
+
+# H null: there is no significant difference in mean purple urchin size in control treatments at the 5 sites
+# H alt: there is a significant difference in mean purple urchin size in control treatments at the 5 sites
+
+# anova
+urchin_aov &amp;lt;- aov(size ~ site, data=urchin)
+summary(urchin_aov)
+# p&amp;lt;2e-16
+
+# tukey
+urchin_tukey &amp;lt;- TukeyHSD(urchin_aov)
+urchin_tukey
+
+# results: all sites have a significant difference except for 
+
+# To report your one-way ANOVA, need to unlist the outcomes isla vista and carpenteria
+
+urchin_outputs &amp;lt;- unlist(summary(urchin_aov))
+urchin_outputs
+
+# Create a data frame of Tukey to reference p-values through in-line referencing
+
+df &amp;lt;- data.frame(urchin_tukey$site)
+df
+&lt;/code&gt;&lt;/pre&gt;
+&lt;br&gt;
+&lt;p&gt;To determine whether or not there is a difference in total mean sizes for purple urchins (&lt;em&gt;Strongylocentrotus purpuratus&lt;/em&gt;) found in five different sites along the Santa Barbara coast, a one-way ANOVA test was performed. The results  F(&lt;code&gt;r urchin_outputs[1]&lt;/code&gt;, &lt;code&gt;r urchin_outputs[2]&lt;/code&gt;) = &lt;code&gt;r round(urchin_outputs[7],2)&lt;/code&gt;, &lt;em&gt;p&lt;/em&gt; = &lt;code&gt;r round(urchin_outputs[9],4)&lt;/code&gt;) indicate that there is a significant difference between at least two of the mean sizes for purple urchins in different sites A Tukey&amp;rsquo;s HSD post-hoc test was performed to determine which sites had purple urhcin populations with significant differences between total mean sizes. The results show that there is a significant difference in all but one pairwise comparison: total mean sizes between purple urchins in Isla Vista (&lt;code&gt;r round(urchin_stats$mean[3], 2)&lt;/code&gt;cm $\pm$ &lt;code&gt;r round(urchin_stats$sd[3], 2)&lt;/code&gt;cm)(mean $\pm$ SD) and Carpinteria (&lt;code&gt;r round(urchin_stats$mean[2], 2)&lt;/code&gt;cm $\pm$ &lt;code&gt;r round(urchin_stats$sd[2], 2)&lt;/code&gt;cm)(&lt;em&gt;p&lt;/em&gt; = &lt;code&gt;r round(df$p.adj[5],3)&lt;/code&gt;). The actual difference between the population means was 0.08cm.&lt;/p&gt;
+&lt;p&gt;All other pairwaise comparisons had significant differences in purple urchin mean sizes(&lt;em&gt;p&lt;/em&gt; = &lt;code&gt;r round(df$p.adj[1],3)&lt;/code&gt;). Mohawk had the largest mean population size (&lt;code&gt;r round(urchin_stats$mean[4], 2)&lt;/code&gt;cm $\pm$ &lt;code&gt;r round(urchin_stats$sd[4], 2)&lt;/code&gt;cm)(mean $\pm$ SD), which was 0.71cm, 1.11cm, 1.03cm, and 1.23cm larger than mean population sizes ar Arroyo Quemado (&lt;code&gt;r round(urchin_stats$mean[1], 2)&lt;/code&gt;cm $\pm$ &lt;code&gt;r round(urchin_stats$sd[1], 2)&lt;/code&gt;cm) (mean $\pm$ SD), Carpinteria (&lt;code&gt;r round(urchin_stats$mean[2], 2)&lt;/code&gt;cm $\pm$ &lt;code&gt;r round(urchin_stats$sd[2], 2)&lt;/code&gt;cm), Isla Vista (&lt;code&gt;r round(urchin_stats$mean[3], 2)&lt;/code&gt;cm $\pm$ &lt;code&gt;r round(urchin_stats$sd[3], 2)&lt;/code&gt;cm)(mean $\pm$ SD), and Naples (&lt;code&gt;r round(urchin_stats$mean[5], 2)&lt;/code&gt;cm $\pm$ &lt;code&gt;r round(urchin_stats$sd[5], 2)&lt;/code&gt;cm) (mean $\pm$ SD), respectively. Difference in mean urchin sizes at the other sites, Carpinteria, Isla Vista, and Naples, was 0.4cm, 0.32cm, and 0.52cm. The difference in mean sizes for urchins in Naples from Isla Vista and Carpinteria was 0.2cm and 0.12cm.&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
