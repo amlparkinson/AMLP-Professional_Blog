@@ -426,35 +426,6 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/#research"><span>Research Projects</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-        
-        
-        
-        
-        
-          
-          
-          
-            
-          
-          
-        
-
-        <li class="nav-item">
           <a class="nav-link " href="/#featured"><span>Publications</span></a>
         </li>
 
@@ -622,9 +593,9 @@
 </div>
 
 
-<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 720px;">
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 514px;">
   <div style="position: relative">
-    <img src="/project/pca/featured_hu24f7b7b31795232ad2c81a23f6acbf93_199199_720x0_resize_q90_lanczos.jpg" alt="" class="featured-image">
+    <img src="/project/pca/featured_hu16bd53c596fb7d93c8510508b800c82e_151626_720x0_resize_q90_lanczos.jpg" alt="" class="featured-image">
     
   </div>
 </div>
@@ -635,9 +606,11 @@
 
     <div class="article-style">
       <h1 id="background">Background</h1>
-<p>I am currently workking on a project  to understand how topographic and climatic variables affected mortality of endemic Big-cone (<em>Pseudotsuga macrocarpa</em>) conifers in Los Padres National Forest after the 2007 Zaca Fire. Knowing how these variables interact to affect fire-induced mortality will help guide restoration efforts by prioritizing out-planting in areas most likely to survive future fires. ArcGIS was used to gather mean values for topographic variables such as elevation, aspect, topographic wetness index (TWI), and topographic position index (TPI) and climate variables; weather data was obtained as 30-year normals from the PRISM Climate Group^1^.  Here I will be exploring relationships between these environmental variables.</p>
+<p>I am currently working on a project  to understand how topographic and climatic variables affected mortality of endemic Big-cone (<em>Pseudotsuga macrocarpa</em>) conifers in Los Padres National Forest after the 2007 Zaca Fire. Knowing how these variables interact to affect fire-induced mortality will help guide restoration efforts by prioritizing out-planting in areas most likely to survive future fires. ArcGIS was used to gather mean values for topographic variables such as elevation, aspect, topographic wetness index (TWI), and topographic position index (TPI) and climate variables; weather data was obtained as 30-year normals from the PRISM Climate Group^1^.  Here I will be exploring relationships between these environmental variables.</p>
 <h1 id="pca">PCA</h1>
-<pre><code class="language-{r,">#sub-data
+<pre><code class="language-{r,">
+#sub-data: only include columns of explanatory variables 
+
 bc_sub &lt;- bc %&gt;% 
   select (elev:tpi, vpd_Aug, twi, flow, vpd_jan, cwd_2) %&gt;% 
   mutate(flow = as.numeric(flow)) %&gt;% 
@@ -659,7 +632,8 @@ z_bc_pca &lt;- prcomp(bc_sub, scale = T)
 
 </code></pre>
 <pre><code class="language-{r,">
-#plot
+#plot PCA to visualize interactions 
+
 autoplot(z_bc_pca, 
          colour = NA, 
          loadings.label = T,
@@ -695,12 +669,6 @@ autoplot(z_bc_pca,
 
 
 
-
-<div class="article-tags">
-  
-  <a class="badge badge-light" href="/tags/demo/">Demo</a>
-  
-</div>
 
 
 
@@ -888,15 +856,6 @@ autoplot(z_bc_pca,
 
 
   
-  
-  <div class="article-widget content-widget-hr">
-    <h3>Related</h3>
-    <ul>
-      
-      <li><a href="/project/external-project/">External Project</a></li>
-      
-    </ul>
-  </div>
   
 
 

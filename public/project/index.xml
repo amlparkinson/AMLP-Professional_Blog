@@ -5,33 +5,12 @@
     <link>/project/</link>
       <atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
     <description>Projects</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Projects</title>
       <link>/project/</link>
     </image>
-    
-    <item>
-      <title>External Project</title>
-      <link>/project/external-project/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>/project/external-project/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Internal Project</title>
-      <link>/project/internal-project/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>/project/internal-project/</guid>
-      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
-&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
-&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
-&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
-&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
-</description>
-    </item>
     
     <item>
       <title>Chi-Square Tests</title>
@@ -99,14 +78,104 @@ salamander_chi &amp;lt;- chisq.test(salamander_ct)
     </item>
     
     <item>
+      <title>Data Visualization and Report Writing</title>
+      <link>/project/data-vis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/project/data-vis/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Capture-recapture studies were carried out in Bonanza Creek Experimental Forest in Alaska to monitor populations of a keystone prey species, the snowshoe hare (&lt;em&gt;Lepus americanus&lt;/em&gt;)^1^.Studies have taken place in five locations in the Tanana Valley since 1998, however available data only includes information from  1998 - 2012 (Figure 1). Data such as sex, age, and weight were documented. For more information on collection methods and spatial information, please see the 
+&lt;a href=&#34;https://portal.lternet.edu/nis/metadataviewer?packageid=knb-lter-bnz.55.22&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;metadata&lt;/a&gt;.&lt;/p&gt;
+&lt;br&gt;
+&lt;center&gt;
+&lt;p&gt;&lt;img src=&#34;snowshoe_hare.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;br&gt; 
+&lt;p&gt;&lt;strong&gt;Figure 1:&lt;/strong&gt; Snowshoe hare (&lt;em&gt;Lepus americanus&lt;/em&gt;) transitioning from a winter to spring coat. Photo credit: 
+&lt;a href=&#34;https://www.fws.gov/refuge/Tetlin/wildlife_and_habitat/snowshoe_hare.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;USFWS&lt;/a&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;h1 id=&#34;bonanza-creek-snowshoe-hare-population&#34;&gt;Bonanza Creek Snowshoe Hare Population&lt;/h1&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{r&#34;&gt;
+# subdata------------------------------------------------------------
+
+hares_sub &amp;lt;- hares %&amp;gt;% 
+  select(date, sex, weight) %&amp;gt;% 
+  drop_na () %&amp;gt;% 
+  mutate (sex = str_to_lower(sex)) %&amp;gt;% 
+  filter (sex %in% c(&amp;quot;m&amp;quot;, &amp;quot;f&amp;quot;)) %&amp;gt;% 
+  mutate (date = lubridate::mdy(date)) %&amp;gt;% 
+  mutate (year = lubridate::year(date),
+          month = lubridate::month(date))
+
+# data frame with annual mean weights by sex--------------------------
+
+hares_mean &amp;lt;- hares_sub %&amp;gt;% 
+  group_by(year,sex) %&amp;gt;% 
+  summarise(mean_weight = mean(weight))
+
+# graph -------------------------------------------------------------
+
+ggplot(hares_mean, aes(x = year, y = mean_weight)) +
+  geom_point(aes(color = sex)) +
+  geom_line(aes(color = sex)) +
+  theme_minimal() +
+  labs (x = &amp;quot;\nYear&amp;quot;, 
+        y = &amp;quot;Mean Weight (g)\n&amp;quot;,
+        title = &amp;quot;Snowshoe Hare Mean Weights&amp;quot;) +
+  scale_x_continuous(lim = c(1998, 2012),
+                     expand = c(0,0),
+                     breaks = seq(1998, 2012, by = 2)) +
+  scale_y_continuous(lim = c(1000, 1800),
+                     expand = c(0,0)) +
+  scale_color_discrete(name = &amp;quot;Sex&amp;quot;, labels = c(&amp;quot;Female&amp;quot;, &amp;quot;Male&amp;quot;))
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Figure 2:&lt;/strong&gt; Annualfluctuations in mean weights of male and female snowshoe hares (&lt;em&gt;Lepus americanus&lt;/em&gt;). Data: Bonanza Creek LTER.&lt;/em&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;h1 id=&#34;summary-statistics-of-snowshoe-hares&#34;&gt;Summary Statistics of Snowshoe Hares&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Table 1:&lt;/strong&gt; Annual Summary statistics amd sample size of snowshoe hare (&lt;em&gt;Lepus americanus&lt;/em&gt;) weights. Data: Bonanza Creek LTER.&lt;/em&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-{r,&#34;&gt;
+# create data frame with summary statistics -------------------------------------
+hares_summary_stats &amp;lt;- hares_sub %&amp;gt;% 
+  group_by(year) %&amp;gt;% 
+  summarise(sample_size = n(),
+            mean_weight = mean(weight),
+            min_weight = min(weight),
+            max_weight = max(weight),
+            sd_weight = sd(weight),
+            se_weight = sd(weight/sqrt(n()))
+            )
+
+# create nice looking table with kableExtra -------------------------------------
+hares_summary_stats %&amp;gt;% 
+  kable(col.names = c(&amp;quot;Year&amp;quot;, &amp;quot;Sample Size&amp;quot;, &amp;quot;Mean&amp;quot;, &amp;quot;Minimum&amp;quot;, 
+                    &amp;quot;Maximum&amp;quot;, &amp;quot;Standard Deviation&amp;quot;, &amp;quot;Standard Error&amp;quot;), align = &amp;quot;c&amp;quot;) %&amp;gt;% 
+  kable_styling (bootstrap_options = c(&amp;quot;striped&amp;quot;, &amp;quot;hover&amp;quot;, &amp;quot;condensed&amp;quot;, &amp;quot;responsive&amp;quot;), 
+    full_width=T,
+    position=&amp;quot;center&amp;quot;) %&amp;gt;% 
+  add_header_above(c(&amp;quot;Summary Statistics of Snowshow Hare Weights (g)&amp;quot; = 7))
+
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;br&gt;
+&lt;h1 id=&#34;citations&#34;&gt;Citations&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;Kielland, Knut; Chapin, F. Stuart; Ruess, Roger W. 2017. Snowshoe hare physical data in Bonanza Creek Experimental Forest: 1999-Present, Bonanza Creek LTER - University of Alaska Fairbanks. BNZ:55, &lt;a href=&#34;http://www.lter.uaf.edu/data/data-detail/id/55&#34;&gt;http://www.lter.uaf.edu/data/data-detail/id/55&lt;/a&gt;. doi:10.6073/pasta/03dce4856d79b91557d8e6ce2cbcdc14&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Principal Component Analysis</title>
       <link>/project/pca/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/project/pca/</guid>
       <description>&lt;h1 id=&#34;background&#34;&gt;Background&lt;/h1&gt;
-&lt;p&gt;I am currently workking on a project  to understand how topographic and climatic variables affected mortality of endemic Big-cone (&lt;em&gt;Pseudotsuga macrocarpa&lt;/em&gt;) conifers in Los Padres National Forest after the 2007 Zaca Fire. Knowing how these variables interact to affect fire-induced mortality will help guide restoration efforts by prioritizing out-planting in areas most likely to survive future fires. ArcGIS was used to gather mean values for topographic variables such as elevation, aspect, topographic wetness index (TWI), and topographic position index (TPI) and climate variables; weather data was obtained as 30-year normals from the PRISM Climate Group^1^.  Here I will be exploring relationships between these environmental variables.&lt;/p&gt;
+&lt;p&gt;I am currently working on a project  to understand how topographic and climatic variables affected mortality of endemic Big-cone (&lt;em&gt;Pseudotsuga macrocarpa&lt;/em&gt;) conifers in Los Padres National Forest after the 2007 Zaca Fire. Knowing how these variables interact to affect fire-induced mortality will help guide restoration efforts by prioritizing out-planting in areas most likely to survive future fires. ArcGIS was used to gather mean values for topographic variables such as elevation, aspect, topographic wetness index (TWI), and topographic position index (TPI) and climate variables; weather data was obtained as 30-year normals from the PRISM Climate Group^1^.  Here I will be exploring relationships between these environmental variables.&lt;/p&gt;
 &lt;h1 id=&#34;pca&#34;&gt;PCA&lt;/h1&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{r,&#34;&gt;#sub-data
+&lt;pre&gt;&lt;code class=&#34;language-{r,&#34;&gt;
+#sub-data: only include columns of explanatory variables 
+
 bc_sub &amp;lt;- bc %&amp;gt;% 
   select (elev:tpi, vpd_Aug, twi, flow, vpd_jan, cwd_2) %&amp;gt;% 
   mutate(flow = as.numeric(flow)) %&amp;gt;% 
@@ -128,7 +197,8 @@ z_bc_pca &amp;lt;- prcomp(bc_sub, scale = T)
 
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code class=&#34;language-{r,&#34;&gt;
-#plot
+#plot PCA to visualize interactions 
+
 autoplot(z_bc_pca, 
          colour = NA, 
          loadings.label = T,

@@ -6,18 +6,20 @@ image:
   focal_point: Smart
 summary: Conducting PCA to examine relationships between variables potentially contributing to fire induced conifer mortality. 
 tags:
-- Demo
+#- Demo
 title: Principal Component Analysis
 ---
 
 
 # Background 
 
-I am currently workking on a project  to understand how topographic and climatic variables affected mortality of endemic Big-cone (*Pseudotsuga macrocarpa*) conifers in Los Padres National Forest after the 2007 Zaca Fire. Knowing how these variables interact to affect fire-induced mortality will help guide restoration efforts by prioritizing out-planting in areas most likely to survive future fires. ArcGIS was used to gather mean values for topographic variables such as elevation, aspect, topographic wetness index (TWI), and topographic position index (TPI) and climate variables; weather data was obtained as 30-year normals from the PRISM Climate Group^1^.  Here I will be exploring relationships between these environmental variables. 
+I am currently working on a project  to understand how topographic and climatic variables affected mortality of endemic Big-cone (*Pseudotsuga macrocarpa*) conifers in Los Padres National Forest after the 2007 Zaca Fire. Knowing how these variables interact to affect fire-induced mortality will help guide restoration efforts by prioritizing out-planting in areas most likely to survive future fires. ArcGIS was used to gather mean values for topographic variables such as elevation, aspect, topographic wetness index (TWI), and topographic position index (TPI) and climate variables; weather data was obtained as 30-year normals from the PRISM Climate Group^1^.  Here I will be exploring relationships between these environmental variables. 
 
 # PCA 
 ```{r, warning = F}
-#sub-data
+
+#sub-data: only include columns of explanatory variables 
+
 bc_sub <- bc %>% 
   select (elev:tpi, vpd_Aug, twi, flow, vpd_jan, cwd_2) %>% 
   mutate(flow = as.numeric(flow)) %>% 
@@ -41,7 +43,8 @@ z_bc_pca <- prcomp(bc_sub, scale = T)
 
 ```{r, echo = F, warning = F, include = T, results = 'asis'}
 
-#plot
+#plot PCA to visualize interactions 
+
 autoplot(z_bc_pca, 
          colour = NA, 
          loadings.label = T,
