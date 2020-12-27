@@ -23,6 +23,11 @@
   </url>
   
   <url>
+    <loc>/</loc>
+    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/talk/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url>
@@ -88,11 +93,6 @@
   </url>
   
   <url>
-    <loc>/courses/</loc>
-    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/post/jupyter/</loc>
     <lastmod>2019-09-05T00:00:00+00:00</lastmod>
   </url>
@@ -105,11 +105,6 @@
   <url>
     <loc>/slides/example/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
   </url>
   
   <url>
@@ -168,7 +163,7 @@
   </url>
   
   <url>
-    <loc>/project/chi-square/</loc>
+    <loc>/courses/</loc>
   </url>
   
   <url>
@@ -176,7 +171,11 @@
   </url>
   
   <url>
-    <loc>/tags/deep-learning/</loc>
+    <loc>/project/masters_project/</loc>
+  </url>
+  
+  <url>
+    <loc>/project/nps-oak-internship/</loc>
   </url>
   
   <url>
@@ -185,10 +184,6 @@
   
   <url>
     <loc>/project/</loc>
-  </url>
-  
-  <url>
-    <loc>/project/anova/</loc>
   </url>
   
 </urlset>

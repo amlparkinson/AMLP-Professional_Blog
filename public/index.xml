@@ -5,7 +5,7 @@
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>My Professional Blog</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 28 Jun 2018 00:00:00 +0100</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>My Professional Blog</title>
@@ -17,7 +17,7 @@
       <link>/courses/example/example1/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       <guid>/courses/example/example1/</guid>
-      <description>&lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
+      <description>&lt;p&gt;In this tutorial, I&#39;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
 &lt;h2 id=&#34;tip-1&#34;&gt;Tip 1&lt;/h2&gt;
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
 &lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
@@ -66,7 +66,7 @@
 &lt;/div&gt;
 &lt;p&gt;Slides can be added in a few ways:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Create&lt;/strong&gt; slides using Academic&amp;rsquo;s 
+&lt;li&gt;&lt;strong&gt;Create&lt;/strong&gt; slides using Academic&#39;s 
 &lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Slides&lt;/em&gt;&lt;/a&gt; feature and link using &lt;code&gt;slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Upload&lt;/strong&gt; an existing slide deck to &lt;code&gt;static/&lt;/code&gt; and link using &lt;code&gt;url_slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Embed&lt;/strong&gt; your slides (e.g. Google Slides) or presentation video on this page using 
@@ -93,7 +93,7 @@
       <guid>/post/writing-technical-content/</guid>
       <description>&lt;p&gt;Academic is designed to give technical content creators a seamless experience. You can focus on the content and Academic handles the rest.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Highlight your code snippets, take notes on math classes, and draw diagrams from textual representation.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;On this page, you&amp;rsquo;ll find some examples of the types of technical content that can be rendered with Academic.&lt;/p&gt;
+&lt;p&gt;On this page, you&#39;ll find some examples of the types of technical content that can be rendered with Academic.&lt;/p&gt;
 &lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;
 &lt;h3 id=&#34;code&#34;&gt;Code&lt;/h3&gt;
 &lt;p&gt;Academic supports a Markdown extension for highlighting code syntax. You can enable this feature by toggling the &lt;code&gt;highlight&lt;/code&gt; option in your &lt;code&gt;config/_default/params.toml&lt;/code&gt; file.&lt;/p&gt;
@@ -358,7 +358,7 @@ date: 2019-09-01
 &lt;p&gt;Edit the metadata of your post, using the 
 &lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;documentation&lt;/a&gt; as a guide to the available options.&lt;/p&gt;
 &lt;p&gt;To set a 
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#featured-image&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;featured image&lt;/a&gt;, place an image named &lt;code&gt;featured&lt;/code&gt; into your post&amp;rsquo;s folder.&lt;/p&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#featured-image&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;featured image&lt;/a&gt;, place an image named &lt;code&gt;featured&lt;/code&gt; into your post&#39;s folder.&lt;/p&gt;
 &lt;p&gt;For other tips, such as using math, see the guide on 
 &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;writing content with Academic&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;convert-notebook-to-markdown&#34;&gt;Convert notebook to Markdown&lt;/h2&gt;
@@ -424,13 +424,13 @@ $$&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Press &lt;code&gt;Space&lt;/code&gt; to play!&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;fragment &#34; &gt;
-One
+One 
 &lt;/span&gt;
 &lt;span class=&#34;fragment &#34; &gt;
-&lt;strong&gt;Two&lt;/strong&gt;
+&lt;strong&gt;Two&lt;/strong&gt; 
 &lt;/span&gt;
 &lt;span class=&#34;fragment &#34; &gt;
-Three
+Three 
 &lt;/span&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;A fragment can accept two optional parameters:&lt;/p&gt;
@@ -485,7 +485,7 @@ Three
 &lt;/code&gt;&lt;/pre&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;custom-css-example&#34;&gt;Custom CSS Example&lt;/h2&gt;
-&lt;p&gt;Let&amp;rsquo;s make headers navy colored.&lt;/p&gt;
+&lt;p&gt;Let&#39;s make headers navy colored.&lt;/p&gt;
 &lt;p&gt;Create &lt;code&gt;assets/css/reveal_custom.css&lt;/code&gt; with:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.reveal section h1,
 .reveal section h2,
@@ -527,7 +527,7 @@ Three
       <guid>/post/getting-started/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Create a free website with Academic using Markdown, Jupyter, or RStudio. Choose a beautiful color theme and build anything with the Page Builder - over 40 &lt;em&gt;widgets&lt;/em&gt;, &lt;em&gt;themes&lt;/em&gt;, and &lt;em&gt;language packs&lt;/em&gt; included!&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;
-&lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Check out the latest &lt;strong&gt;demo&lt;/strong&gt;&lt;/a&gt; of what you&amp;rsquo;ll get in less than 10 minutes, or 
+&lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Check out the latest &lt;strong&gt;demo&lt;/strong&gt;&lt;/a&gt; of what you&#39;ll get in less than 10 minutes, or 
 &lt;a href=&#34;https://sourcethemes.com/academic/#expo&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;view the &lt;strong&gt;showcase&lt;/strong&gt;&lt;/a&gt; of personal, project, and business sites.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;👉 
@@ -715,71 +715,6 @@ Figure 1: A fancy pie chart.
     </item>
     
     <item>
-      <title>Chi-Square Tests</title>
-      <link>/project/chi-square/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/project/chi-square/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-{r&#34;&gt;knitr::opts_chunk$set(echo = F)
-
-# load packages -----------------------------------------------
-
-library(tidyverse)
-library(janitor)
-library(dplyr)
-library(kableExtra)
-library(ggbeeswarm)
-library(car)
-library(effsize)
-
-# add data ---------------------------------------------------
-
-mack_creek_verts &amp;lt;- read_csv(&amp;quot;mack_creek_vertebrates.csv&amp;quot;) %&amp;gt;% 
-  clean_names()
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;h3 id=&#34;is-there-a-significant-difference-in-salamander-counts-in-channel-locations-in-old-growth-and-clear-cut-forests&#34;&gt;&lt;strong&gt;Is there a significant difference in salamander counts in channel locations in old growth and clear cut forests?&lt;/strong&gt;&lt;/h3&gt;
-&lt;br&gt;
-&lt;p&gt;Used a chi-square test to determine if there is a significant difference in what channel Pacific giant salamanders are located (pool, cascade or side channel) between the two old growth and clear cut forests.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Null Hypothesis:&lt;/strong&gt; There is no siginificant difference in what channel Pacific giant salamander are located between old growth and clear cut forests&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Alternative Hypothesis:&lt;/strong&gt; There is a significant difference in what channel Pacific giant salamander are located between old growth and clear cut forests&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{r,&#34;&gt;
-#subdata: only include 2017 and salamader observations-------------------------------------
-
-salamander_channel_2017 &amp;lt;- mack_creek_verts %&amp;gt;% 
-  filter (year == &amp;quot;2017&amp;quot;) %&amp;gt;% 
-  filter (species == &amp;quot;DITE&amp;quot;) %&amp;gt;% 
-  filter (unittype != &amp;quot;IP&amp;quot;) %&amp;gt;% 
-  mutate(channel_type= case_when(
-    unittype %in% &amp;quot;C&amp;quot; ~ &amp;quot;Cascade&amp;quot;,
-    unittype %in% &amp;quot;P&amp;quot; ~&amp;quot;Pool&amp;quot;,
-    unittype %in% &amp;quot;SC&amp;quot; ~ &amp;quot;Side Channel&amp;quot;
-  )) %&amp;gt;% 
-  select (species, channel_type, section)
-
-# counts
-salamander_channel_counts_2017 &amp;lt;- salamander_channel_2017 %&amp;gt;% 
-  group_by(channel_type, section) %&amp;gt;% 
-  count(species) %&amp;gt;% 
-  select (channel_type, section, n)
-
-# create contigency table of ONLY counts
-salamander_ct &amp;lt;- salamander_channel_counts_2017 %&amp;gt;% 
-  pivot_wider(names_from = section, values_from = n) %&amp;gt;%
-  column_to_rownames(&#39;channel_type&#39;)
-
-# chi-square test --------------------------------------------------------------------
-
-salamander_chi &amp;lt;- chisq.test(salamander_ct)
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;br&gt; 
-&lt;p&gt;A Pearson&amp;rsquo;s chi-squared test was performed to examine whether or not there was a significant difference in where in the channel Pacific giant salamanders are located between the two sections of forest (old growth and clear cut). The results from our test found that there was no siginificant difference in what channel Pacific giant salamander are located in forest section ($\chi$^2^(&lt;code&gt;r salamander_chi$parameter&lt;/code&gt;) = &lt;code&gt;r round(salamander_chi$statistic,2)&lt;/code&gt;, &lt;em&gt;p&lt;/em&gt; = &lt;code&gt;r round(salamander_chi$p.value,2)&lt;/code&gt;).&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Data Visualization and Report Writing</title>
       <link>/project/data-vis/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -868,12 +803,72 @@ hares_summary_stats %&amp;gt;%
     </item>
     
     <item>
+      <title>Masters Project</title>
+      <link>/project/masters_project/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/project/masters_project/</guid>
+      <description>&lt;h1 id=&#34;background&#34;&gt;Background&lt;/h1&gt;
+&lt;p&gt;My masters group project at the Bren School or Environmental Science &amp;amp; Management aims to understand the natural range of variation (NRV) of historic yellow pine mixed conifer (YPMC) forests in southern California and compare those conditions to current forests to determine how forest structure has changed over the past 90+ years. YPMCs are the most abundant forest type in southern California, yet there is no compiled NRV for these forests in the study area. This information is essential for forest managers like the U.S. Forest Service to better understand the health of the forests and to conduct forest health projects. We are also making a species distribution model to determine suitable habitat for Jeffrey pines (&lt;em&gt;Pinus jeffreyi&lt;/em&gt;) in the future under several different climate and emissions scenarios. You can learn more about the project 
+&lt;a href=&#34;http://www.gotforestry.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. The expected completion date of the project is Mid to late March 2021.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>NPS Oakwoodland Drought Analysis</title>
+      <link>/project/nps-oak-internship/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/project/nps-oak-internship/</guid>
+      <description>&lt;h1 id=&#34;background&#34;&gt;Background&lt;/h1&gt;
+&lt;p&gt;During a summer internship (2020) with the Future Park Leaders of Emerging Change (FPL), currently known as Scientists in Parks, I worked with the NPS at Santa Monica Mountains National Recreation Area (SAMO) to understand the extent of oak dieback caused during the 2011-2018 California mega drought. This was the most severe drought in 1,200 years (1) and resulted in the loss of over 129 million trees across the state (2). The goals of the internship were:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Determine the best method to identity drought induced oak dieback&lt;/li&gt;
+&lt;li&gt;Determine where dieback has likly occured across the park&lt;/li&gt;
+&lt;/ol&gt;
+&lt;br&gt;
+&lt;h1 id=&#34;results&#34;&gt;Results&lt;/h1&gt;
+&lt;p&gt;I assessed several different remote sensing approaches and determined that using the enhanced vegetation index (EVI) with 30m Landsat imagery was the best method to monitor drought dieback. Landsat was the highest resolution imagery that was free and available both before and throughout the drought. However, I hypothesize higher resolution imagery will be better for this analysis since there will be less heterogeneity within pixels. EVI is an index that essentially quantifies vegetation greenness. EVI is easy to calculate and robust compared to similar indices. There are much more advanced techniques to monitor drought, but EVI is the simplest approach and would be easily reproducible in the future by NPS staff at SAMO with little to no remote sensing or coding experience. However, a drawback of EVI is all vegetation is green. Meaning there can be overlap with other vegetation that grows in or around oaks (Figure 1). While oak stands have been mapped within the park, their boundaries contain other vegetation. Thus, using EVI results in a lot of overlap with pixels dominated by other vegetation types. To overcome this issue I had to take an extra step to ensure the pixels being analyzed were actually oaks.&lt;/p&gt;
+&lt;center&gt;
+&lt;p&gt;&lt;img src=&#34;veg_overlap.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Figure 1:&lt;/strong&gt; Annual grasses and coastal sage scrub grows within the boundary of a mapped oak woodland polygon. The red boxes indicate the boundary of a 30m landsat pixel and demonstrate the overlap of other vegetation growing in the understory of the oaks which can influence the EVI values.&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;A two-step threshold was used to remove non-oak dominated pixels (Figure 2), which were pixels with less than 50% oaks. The first step removed pixels with EVI &amp;lt; 0.18, which resulted in high oak classification accuracy, but also high misclassification of other vegetation as oaks. The seocond step took advantage of the rapid increase in EVI between October and December, which is likely due to annuals like annual grass quickly taking advantage of rainfall. Pixels with EVI &amp;gt; 0.115 were also removed. The two step approach resulted in a slightly lower oak classification accuracy from 89% to 85%, but greatly reduced the misclassification of other vegetation as oaks from 52% to just 39%. Oak pixels burned in a fire between 2005-2016 were also removed to avoid confusion between drought and fire induced canopy dieback.&lt;/p&gt;
+&lt;center&gt;
+&lt;p&gt;&lt;img src=&#34;pixel_removal_threshold.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Figure 2:&lt;/strong&gt; Visual representation of the two thresholds. Oaks, in pink, are oak dominated pixels (&amp;gt;50% of the pixel is covered with oaks).Other + Some Oak, in blue, are pixels dominated by other vegetation but contain some oaks (&amp;lt;50%).&lt;/p&gt;
+&lt;br&gt; 
+&lt;p&gt;I used a Z score ((EVI year - EVI baseline)/standard deviation baseline) to assess the effect of drought on oaks (Figure 3). This method compares average summer (August, September, October) EVI during the drought to a pre-drought baseline (2000-2004). Most oaks with dieback experienced notable decrease in EVI 3 years into the drought after 2014. But oaks with no dieback did not have noticeable loss in EVI until 7 years into the drought in 2018 and they had a much larger increase in EVI after the drought in 2019.&lt;/p&gt;
+&lt;center&gt;
+&lt;p&gt;&lt;img src=&#34;pixel_removal_threshold.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Figure 3:&lt;/strong&gt; Trends of EVI Z scores for pixels classified as having high or no dieback. The dashed line at 0 is the baseline value. Values above 0 represent an increase in EVI compared to baseline, and values less than 0 represent a decrease in EVI compared to baseline.&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;A binomial logistic regression using 2016 Z scores was used to determine a threshold for classifying dieback. Between 2,053-3,466 acres (45.6-77%) of oaks have a 95-55% probability, respectively, of experiencing high canopy dieback (Figure 4). However, this is likely an overestimate as visual comparisons in Google Earth did not verify these results. While many oak stands had some level of canoy dieback, not most did not have high dieback, which was defined as &amp;gt; 80% canopy loss. Future work should aim to adjust the model in order to quantify varying degrees of canopy dieback.&lt;/p&gt;
+&lt;center&gt;
+&lt;p&gt;&lt;img src=&#34;dieback.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Figure 4:&lt;/strong&gt; Oaks with a 95% probability of dieback. Red = pixels with high dieback, green = pixels with no dieback, and grey = removed pixels. Note, the maps at this scale may be a little misleading since there are many pixels being plotted, so some may be hidden.&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;One enlightening aspects of the projects were the results of qualitiative field surveys. COVID-19 did not allow for extensive field work, but a quick assessement showed that approxmately 80% of oaks that suffered high canopy dieback during the drought exhibited canopy regrowth (Figure 5). Even oaks that burned severely during the drought were showing signs of recovery. This just goes to show how fire and drought tolerant oaks really are!&lt;/p&gt;
+&lt;center&gt;
+&lt;p&gt;&lt;img src=&#34;recovery.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Figure 5:&lt;/strong&gt; Oaks that experienced high dieback recovering in summer 2020.&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;To learn more about the project, download the final report 
+&lt;a href=&#34;FINAL_REPORT_2020.pdf&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;br&gt;
+&lt;h1 id=&#34;citations&#34;&gt;Citations&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;Griffin, Daniel, Anchukaitis, Kevin J. 2014. How Unusual is the 2012-2014 California drought? Geophysical Research Letters. 41: 9017-9023.&lt;/li&gt;
+&lt;li&gt;Cal Fire. &lt;a href=&#34;https://www.arcgis.com/apps/MapJournal/index.html?appid=3457736fb0dd45f98d41ab4030ebf048&#34;&gt;https://www.arcgis.com/apps/MapJournal/index.html?appid=3457736fb0dd45f98d41ab4030ebf048&lt;/a&gt;. Date accessed: Dec 2, 2020.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Principal Component Analysis</title>
       <link>/project/pca/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/project/pca/</guid>
       <description>&lt;h1 id=&#34;background&#34;&gt;Background&lt;/h1&gt;
-&lt;p&gt;I am currently working on a project  to understand how topographic and climatic variables affected mortality of endemic Big-cone (&lt;em&gt;Pseudotsuga macrocarpa&lt;/em&gt;) conifers in Los Padres National Forest after the 2007 Zaca Fire. Knowing how these variables interact to affect fire-induced mortality will help guide restoration efforts by prioritizing out-planting in areas most likely to survive future fires. ArcGIS was used to gather mean values for topographic variables such as elevation, aspect, topographic wetness index (TWI), and topographic position index (TPI) and climate variables; weather data was obtained as 30-year normals from the PRISM Climate Group^1^.  Here I will be exploring relationships between these environmental variables.&lt;/p&gt;
+&lt;p&gt;I am currently working on a project  to understand how topographic and climatic variables affected mortality of endemic Big-cone (&lt;em&gt;Pseudotsuga macrocarpa&lt;/em&gt;) conifers in Los Padres National Forest after the 2007 Zaca Fire. Knowing how these variables interact to affect fire-induced mortality will help guide restoration efforts by prioritizing out-planting in areas most likely to survive future fires. ArcGIS was used to gather mean values for topographic variables such as elevation, aspect, topographic wetness index (TWI), and topographic position index (TPI) and climate variables; weather data was obtained as 30-year normals from the PRISM Climate Group (1).  Here I will be exploring relationships between these environmental variables.&lt;/p&gt;
 &lt;h1 id=&#34;pca&#34;&gt;PCA&lt;/h1&gt;
 &lt;pre&gt;&lt;code class=&#34;language-{r,&#34;&gt;
 #sub-data: only include columns of explanatory variables 
@@ -920,419 +915,14 @@ autoplot(z_bc_pca,
 &lt;ul&gt;
 &lt;li&gt;Temperature (i.e. mean maximum August temperature),VPD (August), and climatic water deficit (CWD) have a very strong positive relationship with each other and a very strong negative relationship with annual precipitation. Both CWD and VPD depend on available water in the ecosystem. Thus, this strong trend is not surprising considering that one of the hottest months of the year in which there likely has not been rainfall in months is correlated with high VPD and high CWD.&lt;/li&gt;
 &lt;li&gt;Elevation has a strong negative relationship with temperature, VPD (August and January), and CWD, yet a moderate positive relationship with annua precipitation. As elevation increase, temperatures cool which would in turn redcude VPD and CWD.&lt;/li&gt;
-&lt;li&gt;Slope has a very strong negative relationship with flow accumulation and topographic wetness index (TWI). Slope is a component used to calculate TWI^2^. High values of TWI and flow accumulation (where water accumulates) indicate wetter areas. A decrease in slope would be associated with higher TWI and flow accumulation values.&lt;/li&gt;
+&lt;li&gt;Slope has a very strong negative relationship with flow accumulation and topographic wetness index (TWI). Slope is a component used to calculate TWI (2). High values of TWI and flow accumulation (where water accumulates) indicate wetter areas. A decrease in slope would be associated with higher TWI and flow accumulation values.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;br&gt;
 &lt;h1 id=&#34;citations&#34;&gt;Citations&lt;/h1&gt;
 &lt;ol&gt;
-&lt;li&gt;PRISM Climate Group, Oregon State University, &lt;a href=&#34;http://prism.oregonstate.edu&#34;&gt;http://prism.oregonstate.edu&lt;/a&gt;, created 4 Feb 2004.&lt;/li&gt;
+&lt;li&gt;PRISM Climate Group, Oregon State University, &lt;a href=&#34;http://prism.oregonstate.edu,&#34;&gt;http://prism.oregonstate.edu,&lt;/a&gt; created 4 Feb 2004.&lt;/li&gt;
 &lt;li&gt;Grabs, T., Seibert, J., Bishop, K., Laudon, H. (2009). Modeling spatial patterns of saturated areas: A comparison of the topographic wetness index and a dynamic distributed model. Journal of Hydrology. 373(1-2):15-23.&lt;/li&gt;
 &lt;/ol&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Statistical Tests</title>
-      <link>/project/anova/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/project/anova/</guid>
-      <description>&lt;h3 id=&#34;task-1-predicting-penguin-mass&#34;&gt;Task 1: Predicting Penguin Mass&lt;/h3&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{r}&#34;&gt;# load data and remove NA&#39;s
-penguin &amp;lt;- read_csv(&amp;quot;lter_penguin_species.csv&amp;quot;) %&amp;gt;% 
-  drop_na(body_mass_g) %&amp;gt;% 
-  drop_na(flipper_length_mm) %&amp;gt;% 
-  drop_na(sex) %&amp;gt;% 
-  filter (sex != &amp;quot;.&amp;quot;)
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{r}&#34;&gt;
-# visualize data
-penguin_sub &amp;lt;- penguin %&amp;gt;% 
-  select(body_mass_g, species, flipper_length_mm, sex)
-
-ggplot(penguin_sub, aes(x=flipper_length_mm, y=body_mass_g)) +
-  geom_point(aes(color=fct_rev(species))) +
-  facet_wrap(~sex) +
-  labs(x = &amp;quot;\nFlipper Length (mm)&amp;quot;, 
-       y = &amp;quot;Body Mass (g)\n&amp;quot;, 
-       title = &amp;quot;Weight and Flipper Length\n of Three Antarctic Penguin Species&amp;quot;) +
-  theme_bw() +
-  scale_color_discrete(name=&amp;quot;Species&amp;quot;, 
-                       labels=c(&amp;quot;Gentoo Penguin (Pygoscelis papua)&amp;quot;,
-                                &#39;Chinstrap Penguin (Pygoscelis antarctica)&#39;,
-                                &amp;quot;Adelie Penguin (Pygoscelis adeliae)&amp;quot;)) +
-  theme(legend.title.align=0.5, 
-        plot.title = element_text(hjust=0.5),
-        panel.spacing=unit(2, &amp;quot;lines&amp;quot;)) +
-  scale_x_continuous(lim=c(150, 250), 
-                     expand=c(0,0),
-                     breaks=seq(150, 250, by=50)) +
-  scale_y_continuous(lim=c(2500, 6500), 
-                     expand=c(0,0),
-                     breaks=seq(3000, 6500, by=1000))
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Figure 1:&lt;/strong&gt; Flipper lengths (mm) and body mass (g) by sex of three penguin species in Antarctica - 
-&lt;a href=&#34;https://doi.org/10.6073/pasta/409c808f8fc9899d02401bdb04580af7&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gentoo&lt;/a&gt;, 
-&lt;a href=&#34;https://doi.org/10.6073/pasta/2b1cff60f81640f182433d23e68541ce&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Chinstrap&lt;/a&gt;, and 
-&lt;a href=&#34;https://doi.org/10.6073/pasta/abc50eed9138b75f54eaada0841b9b86&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Adelie&lt;/a&gt; penguins. Data: Palmer Station LTER.&lt;/em&gt;&lt;/p&gt;
-&lt;br&gt;
-General trends from Figure 1:
-&lt;ul&gt;
-&lt;li&gt;Male penguins appear to have higher body mass and slightly longer flipper lengths than females across all three species.&lt;/li&gt;
-&lt;li&gt;Gentoo penguins have the highest body mass and longest flipper length than Chinstrap and Adelie penguins.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;br&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{r,&#34;&gt;#Multiple linear regression model 
-
-# model trials --------------------------------------------------
-
-mass_model1 &amp;lt;- lm(body_mass_g ~ species + flipper_length_mm + sex, data=penguin)
-summary(mass_model1)
-
-mass_model2 &amp;lt;- lm(body_mass_g ~ flipper_length_mm + sex, data=penguin) 
-summary(mass_model2)
-
-mass_model3 &amp;lt;- lm(body_mass_g ~ species + flipper_length_mm, data=penguin)
-summary(mass_model3)
-
-# compare model AICs
-
-AIC (mass_model1) #4740 --&amp;gt; lowest AIC
-AIC (mass_model2) #4862
-AIC (mass_model3) #4895
-
-# check assumptions (residual normality and homoscedasticity)
-
-plot(mass_model1)
-
-# statement about how the model passes the assumptions here #########
-
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Table 1:&lt;/strong&gt; Regression table displaying the relationship between Antarctic penguins species, sex, and flipper length to predict body mass. (body mass(sex, flipper length, species) = -365.8 + 530.38(MALE) + 20.03(flipper length) + 836.26(Gentoo Penguin) - 87.63(Chinstrap Penguin)&lt;/em&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{r,&#34;&gt;#table to report model results (using stargazer)
-
-stargazer(mass_model1, type=&amp;quot;html&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;br&gt;
-&lt;p&gt;The assumptions for using multiple linear regression were met by plotting the residuals of the multiple linear regression model. The QQ plot showed that the residuals follow a normal distribution so the assumption of residual normality is met, while the residuals vs. fitted plot showed that the residuals appear randomly distributed with no change in range so the assumption of homoscedasticity is also met.&lt;/p&gt;
-&lt;br&gt;
-&lt;p&gt;The adjusted R^2^ (R^2^ = 0.865) evaluates how much variance in body mass is explained by the explanatory variables (species, flipper length, sex), so in this case 86.5% of the variance in penguin body mass can be explained by species, flipper length, and sex.&lt;/p&gt;
-&lt;br&gt;
-&lt;p&gt;Interpretation of the model coefficients:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;If everything else about the penguin is the same (species, flipper length), then I expect male penguins to weigh 530.38 grams more than a female penguin on average&lt;/li&gt;
-&lt;li&gt;If everything else is held constant, then I expect boby mass to increase 20.03 grams for every 1 mm increase in flipper length.&lt;/li&gt;
-&lt;li&gt;If everything else about the penguin is the same (sex, flipper length), then I expect Gentoo penguins weigh 836.26 grams more than Adelie penguins.&lt;/li&gt;
-&lt;li&gt;If everything else about the penguin is the same (sex, flipper length), then I expect Chinstrap penguins weigh 87.63 grams less than Adelie penguins.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;br&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Table 2:&lt;/strong&gt; Predicted weights of three penguins (right column) using model: (body mass(sex, flipper length, species) = -365.8 + 530.38(MALE) + 20.03(flipper length) + 836.26(Gentoo Penguin) - 87.63(Chinstrap Penguin)&lt;/em&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{r}&#34;&gt;# Use the model predict the masses 
-
-# create data frame
-new_df &amp;lt;- data.frame(
-  flipper_length_mm = rep(c(195, 205, 220)),
-  sex = rep(c(&amp;quot;FEMALE&amp;quot;, &amp;quot;MALE&amp;quot;, &amp;quot;MALE&amp;quot;)),
-  species = rep(c(&amp;quot;Chinstrap penguin (Pygoscelis antarctica)&amp;quot;, &amp;quot;Adelie Penguin (Pygoscelis adeliae)&amp;quot;, &amp;quot;Gentoo penguin (Pygoscelis papua)&amp;quot;))
-)
-
-# predict values in data frame
-predict_df &amp;lt;- predict(mass_model1, newdata = new_df)
-
-# bind predictions with new_df
-new_df_predictions &amp;lt;- data.frame(new_df, predict_df)
-
-# make new_df_preiditions into a nice table
-
-new_df_predictions %&amp;gt;% 
-  kable (col.names = c(&amp;quot;Flipper Length (mm)&amp;quot;, &amp;quot;Sex&amp;quot;, &amp;quot;Species&amp;quot;, &amp;quot;Body Mass (g) Predictions&amp;quot;), align=&amp;quot;c&amp;quot;) %&amp;gt;%
- # add_header_above(c(&amp;quot; &amp;quot;= 1, &amp;quot;Low Birthweight?&amp;quot;=2)) %&amp;gt;% 
-  kable_styling(
-    bootstrap_options = c(&amp;quot;striped&amp;quot;, &amp;quot;hover&amp;quot;, &amp;quot;condensed&amp;quot;, &amp;quot;responsive&amp;quot;), 
-    full_width=T,
-    position=&amp;quot;center&amp;quot;) 
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;h3 id=&#34;task-2-smoking-effects-on-baby-birth-weight&#34;&gt;Task 2: Smoking effects on baby birth weight&lt;/h3&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{r}&#34;&gt;# load data and only keep tpounds, lowbw, and smoke columns
-
-birthweights &amp;lt;- read_csv(&#39;nc_birthweights.csv&#39;) %&amp;gt;% 
-  select (tpounds, lowbw, smoke) %&amp;gt;% 
-  drop_na(smoke)
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Table 3:&lt;/strong&gt; Data was collected on babies birthweight (categorically classified as low or not low) and whther or not the mother smoked during pregnancy. 1,000 babies from North Carolina were randomly selected for the study.&lt;/em&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{r}&#34;&gt;# table: Does the proportion of babies born at “low birth weight” differ depending on whether the mother smoked or did not smoke during pregnancy
-
-# step 1: create sub data
-
-birthweights_table_data &amp;lt;- birthweights %&amp;gt;% 
-  group_by(smoke) %&amp;gt;% 
-  count(lowbw) %&amp;gt;% 
-  mutate(low_birth_weight = case_when( 
-         lowbw == 1 ~ &amp;quot;Yes&amp;quot;,
-         lowbw == 0 ~ &amp;quot;No&amp;quot;)) %&amp;gt;% 
-  mutate(&amp;quot;Mother Smoke?&amp;quot; = case_when(
-    smoke == 1 ~&amp;quot;Yes&amp;quot;,
-    smoke == 0 ~&amp;quot;No&amp;quot;
-  )) %&amp;gt;% 
-  ungroup(smoke) %&amp;gt;% 
-  select(-lowbw, -smoke)
-
-# step 2 create contigency  table
-
-birthweights_table_counts &amp;lt;- birthweights_table_data %&amp;gt;% 
-  pivot_wider(names_from = low_birth_weight, values_from = n) 
-
-birthweights_table_proportions &amp;lt;- birthweights_table_counts %&amp;gt;% 
-  adorn_percentages(denominator = &amp;quot;row&amp;quot;) %&amp;gt;% 
-  adorn_pct_formatting(digits=1) %&amp;gt;% 
-  adorn_ns(position = &amp;quot;front&amp;quot;)
-
-# step 3: R markdown friendly contigency table with counts and proportions
-
-birthweights_table_proportions %&amp;gt;% 
-  kable (col.names = c(&amp;quot;Mother Smoke?&amp;quot;, &amp;quot;No&amp;quot;, &amp;quot;Yes&amp;quot;)) %&amp;gt;%
-  add_header_above(c(&amp;quot; &amp;quot;= 1, &amp;quot;Low Birthweight?&amp;quot;=2)) %&amp;gt;% 
-  #add_header_above(c(&amp;quot;North Carolina babies: Does mother smoking affect baby&#39;s birthweight?&amp;quot;=3)) %&amp;gt;% 
-  kable_styling(
-    bootstrap_options = c(&amp;quot;striped&amp;quot;, &amp;quot;hover&amp;quot;, &amp;quot;condensed&amp;quot;, &amp;quot;responsive&amp;quot;), 
-    full_width=F,
-    position=&amp;quot;center&amp;quot;) %&amp;gt;% 
-  column_spec(1, width=&#39;4cm&#39;) %&amp;gt;%  #control column 1&#39;s row width
-  column_spec(2, width=&amp;quot;8em&amp;quot;) %&amp;gt;% 
-  column_spec(3, width=&amp;quot;8em&amp;quot;)
-
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{r,&#34;&gt;# statistically significant difference between the proportion of babies born at low birth weights for smoking vs. non-smoking mothers? 
-
-# H null: there is no difference in birthweights of babies from mothers who did and did not smoke
-# H alt : there is a difference in birthweights of babies from mothers who did and did not smoke
-
-# step 1: get cocntigency table of just counts
-birthweight_counts &amp;lt;- birthweights_table_counts %&amp;gt;% 
-  column_to_rownames(&#39;Mother Smoke?&#39;)           
-
-# step 2: run chi-square test
-birthweights_chi &amp;lt;- chisq.test(birthweight_counts)
-birthweights_chi
-
-# p = 0.2696
-&lt;/code&gt;&lt;/pre&gt;
-&lt;br&gt;
-&lt;p&gt;A Pearson&amp;rsquo;s chi-squared test was performed to examine whether or not babies with low birthweights are independent of having mothers who smoked during pregnancy. The results from our test found that babies with low bithweights are independent of being born from mothers who smoked during pregnancy ($\chi$^2^(&lt;code&gt;r birthweights_chi$parameter&lt;/code&gt;) = &lt;code&gt;r round(birthweights_chi$statistic,2)&lt;/code&gt;, &lt;em&gt;p&lt;/em&gt; = &lt;code&gt;r round(birthweights_chi$p.value,2)&lt;/code&gt;).&lt;/p&gt;
-&lt;p&gt;To improve future surveys, researchers might consider changing the &amp;ldquo;smoking during pregnancy&amp;rdquo; category from binomial (yes or no) to an ordinal response with more than two categories (e.g. frequently, sometimes, rarely, never). Some women might have smoked once or twice throughout their pregnancy, while others might have smoked every day, or some other frequency. Mothers who smoked once or twice may not have had as much of an effect on their babies birthweight than mothers who smoked frequently, so researchers would want to distinguish between these differences if there are any.&lt;/p&gt;
-&lt;br&gt;
-&lt;h3 id=&#34;task-3-visualizing-ucsb-campus-profiles&#34;&gt;Task 3: Visualizing UCSB campus profiles&lt;/h3&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{r,&#34;&gt;ucsb &amp;lt;- read_csv(&#39;ucsb_campus_profiles.csv&#39;) %&amp;gt;% 
-  pivot_longer(&#39;2018 - 2019&#39; : &#39;2008 - 2009&#39;,
-               names_to = &#39;year&#39;,
-               values_to = &#39;value&#39;) %&amp;gt;% 
-  clean_names()
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;In this section, I will explore the undergraduate enrollment rates of minorities at University of California, Santa barbara across all years of available data (2008-2019). Enrollment rates of whites, others, and unknowns were excluded from the analysis and some ethnicities were combined into similar groups (Filipinos were combined with Asian and Pacific Islanders, Chicanos and Latinos were combined into a new group called Hispanics).&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{r}&#34;&gt;# for now, explore what relationship to explore
-# subdata: combine groups and remove other/unknown
-
-ucsb_ethnicity &amp;lt;- ucsb %&amp;gt;% 
-  filter (student_level == &amp;quot;Undergraduate (individuals)&amp;quot;) %&amp;gt;% 
-  group_by(ethnicity_domestic_enrollment,year) %&amp;gt;% 
-  summarise(enrollment = sum(value, na.rm=T)) %&amp;gt;% 
-  ungroup(ethnicity_domestic_enrollment)
-
-ucsb_ethnicity_combined &amp;lt;- ucsb_ethnicity %&amp;gt;% 
-  filter (ethnicity_domestic_enrollment != &amp;quot;White&amp;quot;) %&amp;gt;% 
-  filter (ethnicity_domestic_enrollment != &amp;quot;Other&amp;quot;) %&amp;gt;%
-  filter (ethnicity_domestic_enrollment != &amp;quot;Unknown&amp;quot;) %&amp;gt;% 
-  mutate (ethnicity_domestic_enrollment = case_when(
-    ethnicity_domestic_enrollment %in% &#39;American Indian / Alaskan&#39;  ~ &#39;American Indian/Alaskan&#39;, 
-    ethnicity_domestic_enrollment %in% c(&amp;quot;Asian / Pacific Islander&amp;quot;, &amp;quot;Filipino&amp;quot; ) ~ &amp;quot;Asian/Pacific Islander&amp;quot;, 
-    ethnicity_domestic_enrollment %in% &amp;quot;Black / African American&amp;quot; ~ &amp;quot;African American&amp;quot;,
-    ethnicity_domestic_enrollment %in% c(&amp;quot;Chicano&amp;quot;, &amp;quot;Latino&amp;quot;) ~ &amp;quot;Hispanic&amp;quot;,
-    ethnicity_domestic_enrollment %in% &amp;quot;E. Indian / Pakistani&amp;quot; ~ &amp;quot;E.Indian/Pakistani&amp;quot;
-    )) %&amp;gt;% 
-  group_by(year, ethnicity_domestic_enrollment) %&amp;gt;% 
-  summarise(enrollment = sum(enrollment)) 
-
-
-#plot
-
-ggplot (ucsb_ethnicity_combined, aes(x= year, y=enrollment)) +
-  geom_line (aes(group = ethnicity_domestic_enrollment, 
-                 color=ethnicity_domestic_enrollment), 
-             show.legend=F) +
-  geom_point(aes(color=ethnicity_domestic_enrollment), show.legend=F) +
-  theme_bw() +
-  labs(x= &amp;quot;\nYear&amp;quot;, 
-       y= &amp;quot;Enrollment\n&amp;quot;, 
-       title=&amp;quot; Undergraduate Enrollment of Minorities at UC Santa Barbara&amp;quot;, 
-       subtitle=&amp;quot;2008-2019\n&amp;quot;) +
-
-
-
-   coord_cartesian(clip=&amp;quot;off&amp;quot;) +
-   theme(plot.title = element_text(hjust=0.5),
-        plot.subtitle = element_text(hjust=0.5),
-        plot.margin = unit(c(1,7,1,1),&amp;quot;lines&amp;quot;)) +
-  scale_x_discrete (expand=c(0,0),
-                    labels = c(&#39;08-09&#39;, &#39;09-10&#39;, &#39;10-11&#39;, 
-                               &#39;11-12&#39;, &#39;12-13&#39;, &#39;13-14&#39;, 
-                               &#39;14-15&#39;, &#39;15-16&#39;, &#39;16-17&#39;, 
-                               &#39;17-18&#39;, &#39;18-19&#39;)) +
-  scale_y_continuous(lim=c(0, 7000), 
-                     expand=c(0,0),
-                     breaks=seq(0,7000, by=1000)) +
-  annotate(&amp;quot;text&amp;quot;, label= &amp;quot;American Indian/Alaskan&amp;quot;, 
-           x = Inf, 
-           y = 150, 
-           size = 3,
-           hjust = -0.12,
-           vjust = 0) +
-  annotate(&amp;quot;text&amp;quot;, label = &amp;quot;Asian/Pacific Islander&amp;quot;,
-           x = Inf,
-           y = 5000,
-           size = 3,
-           hjust = -0.1,
-           vjust = 0) +
-  annotate(&amp;quot;text&amp;quot;, label = &amp;quot;African American&amp;quot;,
-           x = Inf,
-           y = 1010,
-           size = 3,
-           hjust = -0.175,
-           vjust = 0) +
-  annotate(&amp;quot;text&amp;quot;, label = &amp;quot;Hispanic&amp;quot;,
-           x = Inf,
-           y = 6020,
-           size = 3,
-           hjust = -0.25,
-           vjust = 0) +
-  annotate(&amp;quot;text&amp;quot;, label = &amp;quot;E.Indian/Pakistani&amp;quot;,
-           x = Inf,
-           y = 650,
-           size = 3,
-           hjust = -0.18,
-           vjust = 0) 
-  
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Figure x:&lt;/strong&gt; Annual undergraduate enrollment rates of minorities and underrepresented groups at University of California, Santa Barbara. Years are based on a school calendar year which starts in September of one year and ends in June of the following year. Data: 
-&lt;a href=&#34;http://bap.ucsb.edu/institutional.research/campus.profiles/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;UCSB&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;br&gt;
-&lt;p&gt;General takeways from Figure x:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Line graphs with groups that have large differences in numbers (Hispanics and Asian/Pacific Islander compared to African Americans, E. Indian/Pakistani, and American Indian/Alaskan) can result in incorrectly misinterpreting  information minorities have had the largest growth in undergradutes.&lt;/li&gt;
-&lt;li&gt;While it appears that the enrollment for the other three minorities has been relatively stagnant, African American enrollment has almost doubled and East Indian and Pakistani enrollment has increased by 226% since 2008-2009 school year. American Indian and Alaskan enrollment has very similar percent change: 52% and 54% respectively.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;br&gt;
-&lt;h3 id=&#34;task-4-purple-urchins-on-the-santa-barbara-coast&#34;&gt;Task 4: Purple urchins on the Santa Barbara coast&lt;/h3&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{r,&#34;&gt;# load data and modify so only have purple urchin observations in control treatments 
-
-urchin &amp;lt;- read_csv(&#39;sbc_lter_urchins.csv&#39;) 
-urchin &amp;lt;-  urchin %&amp;gt;% 
-  clean_names() %&amp;gt;% 
-  filter (common_name == &amp;quot;Purple Urchin&amp;quot;) %&amp;gt;% 
-  filter (treatment == &amp;quot;CONTROL&amp;quot;) %&amp;gt;% 
-  uncount(count) %&amp;gt;% 
-  select (year, site, size) %&amp;gt;% 
-  mutate(site = case_when(
-    site %in% c(&amp;quot;CARP&amp;quot;) ~ &amp;quot;Carpinteria&amp;quot; ,
-    site %in% c(&amp;quot;IVEE&amp;quot;) ~ &amp;quot;Isla Vista&amp;quot;,
-    site %in% c(&amp;quot;AQUE&amp;quot;) ~ &amp;quot;Arroyo Quemado&amp;quot;,
-    site %in% c(&amp;quot;MOHK&amp;quot;) ~ &amp;quot;Mohawk&amp;quot;, 
-    site %in% c(&amp;quot;NAPL&amp;quot;) ~ &amp;quot;Naples&amp;quot;)) %&amp;gt;% 
-  mutate(year=as.character(year))
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;br&gt; 
-&lt;p&gt;*&lt;strong&gt;Table 4&lt;/strong&gt; Summary statistics for purple urchin (&lt;em&gt;Strongylocentrotus purpuratus&lt;/em&gt;) population sizes in control plots at five sites along the Santa Barbara coast from 2008-2018. Data: 
-&lt;a href=&#34;https://doi.org/10.6073/pasta/846569acc8745c133a44eac40245e6f0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SBC LTER&lt;/a&gt;. *&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{r}&#34;&gt;
-# summary statistics for urchin sizes at the 5 different sites
-
-urchin_stats &amp;lt;- urchin %&amp;gt;% 
-  group_by(site) %&amp;gt;% 
-  summarize (mean = mean(size, na.rm=T),
-             sd = sd(size, na.rm=T),
-             se = sd((size) / sqrt(n()), na.rm=T),
-             sample_size = n())
-# kable of urchin stats
-
-urchin_stats %&amp;gt;% 
-  kable (col.names = c(&amp;quot;Site&amp;quot;, &amp;quot;Mean&amp;quot;, &amp;quot;Standard Deviation&amp;quot;, &amp;quot;Standard Error&amp;quot;, &amp;quot;Sample Size&amp;quot;),
-         digits=2) %&amp;gt;%
-  kable_styling(
-    bootstrap_options = c(&amp;quot;striped&amp;quot;, &amp;quot;hover&amp;quot;, &amp;quot;condensed&amp;quot;, &amp;quot;responsive&amp;quot;), 
-    full_width=T,
-    position=&amp;quot;center&amp;quot;) 
-
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;br&gt;
-&lt;br&gt;
-```{r}
-# exploratory graphs of purple urchin size distributions at each site
-&lt;p&gt;ggplot (urchin, aes(x=size)) +
-geom_density(aes(fill=site), show.legend=F) +
-labs ( x= &amp;lsquo;\nSize (cm)&#39;, 
-y = &amp;lsquo;Density\n&amp;rsquo;, 
-title=&amp;quot;Sampling distribution of purple urchins&amp;rdquo;,
-subtitle = &amp;ldquo;2008-2018\n&amp;rdquo;) +
-scale_x_continuous(expand = c(0,0),
-lim = c(0,10),
-breaks = seq(0,10, by=2)) +
-scale_y_continuous(expand = c(0,0)) +
-theme_bw() +
-facet_wrap(~site, scales=&amp;quot;free_x&amp;rdquo;) +
-theme(plot.title = element_text(hjust=0.5),
-panel.spacing=unit(2, &amp;ldquo;lines&amp;rdquo;),
-plot.subtitle = element_text(hjust=0.5))&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;
-Observed trends in sampe distribution graphs:
-
-- Urchin sizes at Arroyo Quemado, Isla Vista, and Mohawk appear normally distributed, while urchin sizes are slightly right skewed.
-
-
-&amp;lt;br&amp;gt;
-
-Observations of exploratory graphs:
-
-- Distribution of sizes appears to be normal for all five sites.
-- There is a large sample size for all sites, so it is unlikely that all urchins at the sites fall within these bounds. These gaps in the graph are likely due to sampling error --&amp;gt; check metadata
-
-```{r, include = F}
-# is there a significant difference in mean purple urchin size in control treatments at the 5 sites
-
-# H null: there is no significant difference in mean purple urchin size in control treatments at the 5 sites
-# H alt: there is a significant difference in mean purple urchin size in control treatments at the 5 sites
-
-# anova
-urchin_aov &amp;lt;- aov(size ~ site, data=urchin)
-summary(urchin_aov)
-# p&amp;lt;2e-16
-
-# tukey
-urchin_tukey &amp;lt;- TukeyHSD(urchin_aov)
-urchin_tukey
-
-# results: all sites have a significant difference except for 
-
-# To report your one-way ANOVA, need to unlist the outcomes isla vista and carpenteria
-
-urchin_outputs &amp;lt;- unlist(summary(urchin_aov))
-urchin_outputs
-
-# Create a data frame of Tukey to reference p-values through in-line referencing
-
-df &amp;lt;- data.frame(urchin_tukey$site)
-df
-&lt;/code&gt;&lt;/pre&gt;
-&lt;br&gt;
-&lt;p&gt;To determine whether or not there is a difference in total mean sizes for purple urchins (&lt;em&gt;Strongylocentrotus purpuratus&lt;/em&gt;) found in five different sites along the Santa Barbara coast, a one-way ANOVA test was performed. The results  F(&lt;code&gt;r urchin_outputs[1]&lt;/code&gt;, &lt;code&gt;r urchin_outputs[2]&lt;/code&gt;) = &lt;code&gt;r round(urchin_outputs[7],2)&lt;/code&gt;, &lt;em&gt;p&lt;/em&gt; = &lt;code&gt;r round(urchin_outputs[9],4)&lt;/code&gt;) indicate that there is a significant difference between at least two of the mean sizes for purple urchins in different sites A Tukey&amp;rsquo;s HSD post-hoc test was performed to determine which sites had purple urhcin populations with significant differences between total mean sizes. The results show that there is a significant difference in all but one pairwise comparison: total mean sizes between purple urchins in Isla Vista (&lt;code&gt;r round(urchin_stats$mean[3], 2)&lt;/code&gt;cm $\pm$ &lt;code&gt;r round(urchin_stats$sd[3], 2)&lt;/code&gt;cm)(mean $\pm$ SD) and Carpinteria (&lt;code&gt;r round(urchin_stats$mean[2], 2)&lt;/code&gt;cm $\pm$ &lt;code&gt;r round(urchin_stats$sd[2], 2)&lt;/code&gt;cm)(&lt;em&gt;p&lt;/em&gt; = &lt;code&gt;r round(df$p.adj[5],3)&lt;/code&gt;). The actual difference between the population means was 0.08cm.&lt;/p&gt;
-&lt;p&gt;All other pairwaise comparisons had significant differences in purple urchin mean sizes(&lt;em&gt;p&lt;/em&gt; = &lt;code&gt;r round(df$p.adj[1],3)&lt;/code&gt;). Mohawk had the largest mean population size (&lt;code&gt;r round(urchin_stats$mean[4], 2)&lt;/code&gt;cm $\pm$ &lt;code&gt;r round(urchin_stats$sd[4], 2)&lt;/code&gt;cm)(mean $\pm$ SD), which was 0.71cm, 1.11cm, 1.03cm, and 1.23cm larger than mean population sizes ar Arroyo Quemado (&lt;code&gt;r round(urchin_stats$mean[1], 2)&lt;/code&gt;cm $\pm$ &lt;code&gt;r round(urchin_stats$sd[1], 2)&lt;/code&gt;cm) (mean $\pm$ SD), Carpinteria (&lt;code&gt;r round(urchin_stats$mean[2], 2)&lt;/code&gt;cm $\pm$ &lt;code&gt;r round(urchin_stats$sd[2], 2)&lt;/code&gt;cm), Isla Vista (&lt;code&gt;r round(urchin_stats$mean[3], 2)&lt;/code&gt;cm $\pm$ &lt;code&gt;r round(urchin_stats$sd[3], 2)&lt;/code&gt;cm)(mean $\pm$ SD), and Naples (&lt;code&gt;r round(urchin_stats$mean[5], 2)&lt;/code&gt;cm $\pm$ &lt;code&gt;r round(urchin_stats$sd[5], 2)&lt;/code&gt;cm) (mean $\pm$ SD), respectively. Difference in mean urchin sizes at the other sites, Carpinteria, Isla Vista, and Naples, was 0.4cm, 0.32cm, and 0.52cm. The difference in mean sizes for urchins in Naples from Isla Vista and Carpinteria was 0.2cm and 0.12cm.&lt;/p&gt;
 </description>
     </item>
     
